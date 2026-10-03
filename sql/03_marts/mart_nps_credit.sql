@@ -1,0 +1,1 @@
+-- NPS joined to the nearest credit snapshot.

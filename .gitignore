@@ -1,0 +1,15 @@
+# data and secrets never go to GitHub
+data/
+logs/
+.env*
+*.pem
+keys/
+*.json
+!config/*.json
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+outputs/profiling/*
+!outputs/profiling/.gitkeep

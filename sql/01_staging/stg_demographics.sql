@@ -1,0 +1,1 @@
+-- Masked DOB, gender and income, deduplicated to one row per loan.

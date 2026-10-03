@@ -1,0 +1,1 @@
+-- Data quality check: referential_integrity. Returns rows only when the check fails.

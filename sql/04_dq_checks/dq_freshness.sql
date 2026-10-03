@@ -1,0 +1,1 @@
+-- Data quality check: freshness. Returns rows only when the check fails.

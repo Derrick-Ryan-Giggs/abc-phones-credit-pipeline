@@ -1,0 +1,1 @@
+-- Data quality check: null_thresholds. Returns rows only when the check fails.

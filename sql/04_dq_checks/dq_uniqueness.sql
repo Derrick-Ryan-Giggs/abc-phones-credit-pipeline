@@ -1,0 +1,1 @@
+-- Data quality check: uniqueness. Returns rows only when the check fails.

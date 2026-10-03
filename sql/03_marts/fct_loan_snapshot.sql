@@ -1,0 +1,1 @@
+-- Analytics-ready fact table: loan x snapshot with all features.

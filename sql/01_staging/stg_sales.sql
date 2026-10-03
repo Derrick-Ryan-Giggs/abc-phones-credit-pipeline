@@ -1,0 +1,1 @@
+-- Typed sales details, one row per loan.

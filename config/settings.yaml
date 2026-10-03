@@ -1,0 +1,22 @@
+# Non-secret settings only. Secrets (the masking key) live in GCP Secret Manager. No .env files.
+gcp:
+  project_id: abc-credit-portfolio-rg
+  region: us-central1
+  raw_bucket: abc-credit-portfolio-rg-raw
+  masking_secret: masking-key
+  masking_secret_version: "1"   # pinned so hashes never change by accident
+paths:
+  raw: data/raw
+  interim: data/interim
+  staging: data/staging
+  outputs: outputs
+bigquery:
+  dataset_raw: abc_raw
+  dataset_staging: abc_staging
+  dataset_marts: abc_marts
+  location: us-central1
+snapshots:
+  expected_dates: ["2025-01-01", "2025-03-31", "2025-06-30", "2025-09-30", "2025-12-30"]
+quality:
+  null_threshold_pct: 5
+  age_range: [18, 120]

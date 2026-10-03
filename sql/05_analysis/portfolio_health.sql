@@ -1,0 +1,1 @@
+-- Question 3A: delinquency, loss rate, collection rate, retention trends.

@@ -1,0 +1,1 @@
+-- Data quality check: no_unmasked_pii. Returns rows only when the check fails.

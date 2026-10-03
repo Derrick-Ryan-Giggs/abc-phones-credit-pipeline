@@ -1,0 +1,11 @@
+[project]
+name = "annex-de"
+version = "0.1.0"
+description = "ABC Phones credit portfolio pipeline"
+requires-python = ">=3.11"
+dependencies = ["pandas", "numpy", "openpyxl", "pyyaml"]
+
+[project.optional-dependencies]
+cloud = ["google-cloud-secret-manager", "google-cloud-bigquery", "google-cloud-storage", "pyarrow", "db-dtypes"]
+viz = ["matplotlib", "plotly"]
+dev = ["pytest"]

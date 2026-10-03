@@ -1,0 +1,1 @@
+-- Typed credit snapshots, one row per LOAN_ID per snapshot DATE. Partition by DATE.
