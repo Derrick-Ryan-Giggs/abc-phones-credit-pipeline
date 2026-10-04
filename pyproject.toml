@@ -8,4 +8,7 @@ dependencies = ["pandas", "numpy", "openpyxl", "pyyaml"]
 [project.optional-dependencies]
 cloud = ["google-cloud-secret-manager", "google-cloud-bigquery", "google-cloud-storage", "pyarrow", "db-dtypes"]
 viz = ["matplotlib", "plotly"]
-dev = ["pytest"]
+dev = [
+    "duckdb>=1.5.6",
+    "pytest",
+]
