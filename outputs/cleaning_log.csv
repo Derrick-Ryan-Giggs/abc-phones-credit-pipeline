@@ -1,0 +1,22 @@
+table,step,rows_in,rows_out,note
+credit,drop empty column and corrupted RETURN_DATE,71456,71456,"dropped ['RETURN_DATE', 'Unnamed: 28']"
+credit,drop rows with blank LOAN_ID,71456,71456,
+credit,flags set,71456,71456,arrears_zero_days=10148 payment_after_snapshot=22473
+credit,"deduplicate on (loan_key, snapshot_date)",71456,71456,
+sales,drop rows with blank SALE_ID,20747,20747,Loan Id differs from SALE_ID on 7 rows; SALE_ID used as key
+sales,SELLER (names) not loaded; ISO dates parsed,20747,20747,"loan_term not numeric on 765 rows (e.g. STDHIGH), raw value kept"
+sales,deduplicate on loan_key,20747,20747,
+dob,drop rows without a usable Loan Id,57130,13562,unkeyed rows cannot be joined to any loan
+dob,loans with several records,1035,63,rows_out = loans whose records disagree on the date of birth
+dob,provider agreement with chosen DOB: SMILEID,86,84,rows in multi-record loans / rows that match the chosen DOB
+dob,provider agreement with chosen DOB: SPINMOBILE,2530,2432,rows in multi-record loans / rows that match the chosen DOB
+dob,provider agreement with chosen DOB: TRANSUNION,764,763,rows in multi-record loans / rows that match the chosen DOB
+dob,"one row per loan (valid DOB, provider priority, latest)",13562,11217,
+loan_age,age and band at each snapshot; DOB discarded,71456,71456,Unknown: no_dob=43686 invalid_age=0
+income,drop rows without a usable Loan Id,22839,11885,
+income,one row per loan (longest Duration),11885,10609,
+nps,responses kept; free text redacted; matched to snapshot,4129,4129,blank scores=144 unmatched_snapshot=0 latest_per_loan=3532
+coverage,latest snapshot loans with sales row,20742,20742,
+coverage,latest snapshot loans with income row,20742,10609,
+coverage,latest snapshot loans with NPS response,20742,3532,
+coverage,latest snapshot loans with a valid age band,20742,11175,

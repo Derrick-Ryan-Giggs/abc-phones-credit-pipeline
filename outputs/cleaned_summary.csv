@@ -1,0 +1,501 @@
+loan_key,snapshot_date,portfolio_scope,account_status_l1,account_status_l2,days_past_due,arrears,total_paid,balance,age_band
+03e15e34607f5cfc719c,2025-01-01,financed,First Month Default without inventory over 30,FMD,403,108910.0,44169,108910.0,Unknown
+03e79777d63c4b442ebb,2025-01-01,financed,Inactive 01-07,Inactive,6,860.0,11419,38700.0,Unknown
+07c92869590cbc450d7e,2025-01-01,financed,Existing Active,Active,0,0.0,35499,25000.0,Unknown
+0feaaa3be0a0a132e845,2025-01-01,lost,Lost Write Off,PAR 30,433,59000.0,12359,59000.0,Unknown
+1365d440916541a7c79b,2025-01-01,financed,Cancelled Returned past 3 mths,Return,491,80320.0,22539,80320.0,Unknown
+15867365194eab061330,2025-01-01,financed,First Payment Default,FPD,76,10890.0,7389,50490.0,Unknown
+1baa9f68701c0cf9f0c0,2025-01-01,financed,Existing Active,Active,0,0.0,83089,590.0,Unknown
+1d6ecb2b73c874bbe8a4,2025-01-01,financed,Existing Active,Active,0,0.0,24399,57400.0,Unknown
+223bc24814e27bad4614,2025-01-01,financed,Write Off,PAR 30,152,56540.0,36349,120790.0,Unknown
+24a3cfab7b48003a2fe3,2025-01-01,financed,Write Off,PAR 30,284,29750.0,15289,29750.0,Unknown
+280ad82067ba544431f4,2025-01-01,financed,Write Off,PAR 30,376,61900.0,19299,61900.0,Unknown
+3ca5a20d56f3c7a1430e,2025-01-01,lost,Existing Active,Active,0,0.0,25299,43660.0,Unknown
+3cce1cf5ef38b30427c0,2025-01-01,financed,Existing Active,Active,0,100.0,37379,10760.0,Unknown
+3e8ecf8de13811cc8ff0,2025-01-01,financed,Existing Active,Active,0,0.0,27139,75680.0,Unknown
+4159a07745d9231a8949,2025-01-01,financed,Existing Active,Active,0,19.0,49380,55819.0,Unknown
+41abb833c258a77fe2ce,2025-01-01,financed,Existing Active,Active,0,1460.0,32379,64540.0,Unknown
+41ee31ece2287c10561f,2025-01-01,financed,Existing Active,Active,0,0.0,27039,27840.0,Unknown
+4d216b1a7654fa264a13,2025-01-01,financed,Cancelled Returned past 3 mths,Return,82,9599.0,15100,32799.0,Unknown
+4e2884345382ee597cc4,2025-01-01,financed,Write Off,PAR 30,258,56980.0,23739,70840.0,Unknown
+56f15f1c073641bb9889,2025-01-01,financed,First Month Default with inventory,Return,184,31890.0,9209,60690.0,Unknown
+5794673d88a1f30cecc7,2025-01-01,cash,Paid Off Cash,Paid Off,0,0.0,47999,0.0,Unknown
+5b1e58045c0f40bd4074,2025-01-01,cash,Paid Off Cash,Paid Off,0,0.0,29499,0.0,Unknown
+63d9bdbdf66f10ab4aab,2025-01-01,cash,Paid Off Cash,Paid Off,0,0.0,59499,0.0,Unknown
+70366c05bc1cb2b2a800,2025-01-01,financed,First Payment Default,FPD,348,60499.0,12210,61709.0,Unknown
+73c6ae8391b0ea94b9ef,2025-01-01,financed,Paid Off Loan,Paid Off,0,100.0,57299,0.0,Unknown
+748aa6ffd0bd773a909b,2025-01-01,cash,Paid Off Cash,Paid Off,0,0.0,53500,0.0,Unknown
+8211abe0dc3c16ab4c9a,2025-01-01,financed,Existing Active,Active,0,1670.0,53319,20720.0,Unknown
+84897a251010fc0d2204,2025-01-01,financed,Existing Active,Active,0,80.0,78919,2740.0,Unknown
+84e69fc04e9e62290b47,2025-01-01,financed,Write Off,PAR 30,98,12420.0,13319,37940.0,Unknown
+8689eecb270e22b6dfeb,2025-01-01,financed,Inactive 08-14,PAR 7,14,1560.0,26299,16160.0,Unknown
+88f7fac5b78cb110cd85,2025-01-01,financed,Existing Active,Active,0,670.0,26579,24160.0,Unknown
+90e2144058e3e96837c8,2025-01-01,financed,Write Off,PAR 30,119,9940.0,7559,25060.0,Unknown
+9da16b345507a17bf638,2025-01-01,financed,Existing Active,Active,0,100.0,48419,31840.0,Unknown
+a0d0b83d3470d857cba2,2025-01-01,financed,Existing Active,Active,0,0.0,46399,56000.0,Unknown
+a4c44b7517fa2032d935,2025-01-01,financed,Paid Off Loan,Paid Off,0,0.0,44479,0.0,Unknown
+a5407fe826525d422a95,2025-01-01,financed,Inactive 01-07,Inactive,1,1180.0,18219,50740.0,Unknown
+a981ab69e5c74279d7b5,2025-01-01,financed,New Active,Active,0,0.0,10989,75990.0,26-35
+aa7c1e19dfd9c79e0b50,2025-01-01,financed,New Active,Active,0,0.0,19385,136169.0,36-45
+ae7f2adf84c316ce1978,2025-01-01,financed,Blocked 61-90,PAR 30,64,12800.0,40499,34560.0,Unknown
+aeef62a5e83392193e47,2025-01-01,financed,Paid Off Loan,Paid Off,0,100.0,55719,0.0,Unknown
+ba8b561e894fbfb39bb3,2025-01-01,financed,Cancelled Returned past 3 mths,Return,222,24960.0,10459,35100.0,Unknown
+bbe86435f25dac9e286b,2025-01-01,financed,New Active,Active,0,0.0,9019,42240.0,18-25
+c8e3e7ba693e11718fa0,2025-01-01,financed,Write Off,PAR 30,298,36580.0,34779,36580.0,Unknown
+c976b9cdc68648a86cc5,2025-01-01,cash,Paid Off Cash,Paid Off,0,0.0,12000,0.0,Unknown
+cba8dda09edd2b6db516,2025-01-01,financed,Existing Active,Active,0,0.0,45759,34500.0,26-35
+d3d22f95bd18441ce25a,2025-01-01,financed,New Active,Active,0,0.0,12569,58470.0,26-35
+d5c6b718803e7f7a73b7,2025-01-01,financed,New Active,Active,0,0.0,9689,45090.0,36-45
+d8c8dd3b5098797576c7,2025-01-01,financed,Existing Active,Active,0,100.0,36399,31420.0,Unknown
+dc03b068e128af890d45,2025-01-01,financed,First Month Default with inventory,Return,177,35880.0,9879,70380.0,Unknown
+e1d002cd560c8b6b5fbc,2025-01-01,financed,Paid Off Loan,Paid Off,0,0.0,40899,0.0,Unknown
+e6ab6238b705e579eb23,2025-01-01,financed,Existing Active,Active,0,0.0,134109,30590.0,Unknown
+e6b88b08498835820dff,2025-01-01,financed,Inactive 01-07,Inactive,5,100.0,20479,18860.0,Unknown
+f3119358055f3206d97b,2025-01-01,cash,Paid Off Cash,Paid Off,0,0.0,26500,0.0,Unknown
+f7968c3eb57f1192bc15,2025-01-01,financed,Existing Active,Active,0,0.0,12799,32760.0,Unknown
+f7fad5fd79f20905f277,2025-01-01,cash,Paid Off Cash,Paid Off,0,0.0,21999,0.0,Unknown
+fa0f830702b9968f3385,2025-01-01,financed,Inactive 15-30,PAR 7,20,3330.0,17089,47730.0,Unknown
+faea4ffbdfaab18c3d07,2025-01-01,financed,Existing Active,Active,0,0.0,56779,108360.0,26-35
+0317b5af0f63abdb3612,2025-03-31,financed,Blocked 61-90,PAR 30,89,37570.0,59329,130050.0,Unknown
+0470d85c6fd29ad4ff7b,2025-03-31,financed,Existing Active,Active,0,0.0,21739,28380.0,Unknown
+081d0c05c5716c9c72fe,2025-03-31,financed,Cancelled Returned past 3 mths,Return,333,149499.0,67500,149499.0,36-45
+082eaf17e54036dfcd40,2025-03-31,financed,Paid Off Loan,Paid Off,0,0.0,44493,0.0,Unknown
+09a411fd3ac0bc1e842d,2025-03-31,financed,Existing Active,Active,0,320.0,44539,3600.0,Unknown
+149abb560f133e7ed305,2025-03-31,financed,Paid Off Loan,Paid Off,0,0.0,69979,0.0,Unknown
+169d892a7fb7eadbd371,2025-03-31,financed,Cancelled Returned past 3 mths,Return,241,48299.0,12640,67619.0,26-35
+1d23b44ba8c7200587b3,2025-03-31,financed,First Month Default without inventory over 30,FMD,224,88649.0,42250,129149.0,Unknown
+1f397c91deaa35d52f43,2025-03-31,cash,Paid Off Cash,Paid Off,0,0.0,54999,0.0,Unknown
+24958dab0c7077074125,2025-03-31,cash,First 2 days Return,Return,0,52499.0,52499,0.0,Unknown
+292c66bc7025f5f03336,2025-03-31,financed,Existing Active,Active,0,1920.0,16159,21120.0,Unknown
+2b6ffee50cf6819d8697,2025-03-31,financed,Blocked 31-60,PAR 30,39,10020.0,49109,48430.0,Unknown
+33074a6c46df19020555,2025-03-31,financed,First Payment Default,FPD,3,18649.0,18650,149719.0,Unknown
+33671bb2dd6a6e24afe9,2025-03-31,financed,Inactive 01-07,Inactive,7,1480.0,60839,19420.0,Unknown
+35ddd9f257705330a958,2025-03-31,financed,Write Off,PAR 30,240,40600.0,15619,52200.0,Unknown
+36465a0f9546fb3411d9,2025-03-31,financed,First Payment Default,FPD,118,18530.0,7989,55590.0,26-35
+383b5e88f342623410bf,2025-03-31,financed,Paid Off Loan,Paid Off,0,0.0,40911,0.0,Unknown
+392879a33afab4766092,2025-03-31,financed,First Payment Default,FPD,248,31680.0,6379,44880.0,Unknown
+3f5971ec1cf4c4f2a141,2025-03-31,lost,Existing Active,Active,0,0.0,28439,19980.0,Unknown
+3f6db488c49202bdf52a,2025-03-31,financed,Existing Active,Active,0,0.0,12939,26130.0,18-25
+4d5b2042e5246a3ae6d1,2025-03-31,financed,Paid Off Loan,Paid Off,0,0.0,88499,0.0,Unknown
+50e493dd127430f28a16,2025-03-31,financed,Existing Active,Active,0,0.0,36344,50635.0,26-35
+54e6cc0c4874cd42e7c1,2025-03-31,financed,Blocked 31-60,PAR 30,38,4200.0,11819,30120.0,26-35
+5d9773d5311b4a4419ca,2025-03-31,financed,Existing Active,Active,0,5620.0,49799,30460.0,Unknown
+64c07628cbb76b60de97,2025-03-31,financed,Write Off,PAR 30,135,33370.0,25759,71780.0,Unknown
+71e68e8bac0c3615c80d,2025-03-31,financed,First Month Default without inventory 08-14,PAR 7,11,1490.0,9719,52850.0,26-35
+72aa54d66a7fe2d00a26,2025-03-31,financed,Paid Off Loan,Paid Off,0,100.0,45459,0.0,Unknown
+74a5c8ea68afc4727b02,2025-03-31,financed,Cancelled Returned past 3 mths,Return,308,68260.0,17199,72880.0,Unknown
+74e1efd60531e5c41bba,2025-03-31,financed,Write Off,PAR 30,284,44590.0,24209,44590.0,Unknown
+7c636af34ebbaf9f065d,2025-03-31,financed,Cancelled Returned past 3 mths,Return,251,36000.0,14499,46000.0,Unknown
+80114901fc422272f6e4,2025-03-31,financed,Write Off,PAR 30,182,21273.0,11376,34703.0,Unknown
+836f575a84e23850086d,2025-03-31,financed,Write Off,PAR 30,263,24398.0,16501,24398.0,Unknown
+8478cee6eb36d4d01eea,2025-03-31,financed,Paid Off Loan,Paid Off,0,100.0,57299,0.0,Unknown
+8baa6c67a5f924075a95,2025-03-31,financed,Write Off,PAR 30,538,59840.0,39399,59840.0,Unknown
+8bcbbc0b963eaa9df93d,2025-03-31,financed,Paid Off Loan,Paid Off,0,0.0,57399,0.0,Unknown
+8ed40733f4a8e4cc818d,2025-03-31,financed,First Payment Default,FPD,581,77300.0,12739,77300.0,Unknown
+96259c5583c41a68d098,2025-03-31,financed,First Month Default without inventory over 30,FMD,329,33600.0,7299,33600.0,Unknown
+990469cbba536c6995d6,2025-03-31,financed,New Active,Active,0,0.0,19899,75090.0,26-35
+99ad1b0019085cab6b30,2025-03-31,financed,Paid Off Loan,Paid Off,0,0.0,45539,0.0,Unknown
+9dc377a643a30545a6da,2025-03-31,financed,New Active,Active,0,0.0,18419,64860.0,18-25
+9ddf48f75081ad0428f5,2025-03-31,financed,Paid Off Loan,Paid Off,0,100.0,45439,0.0,Unknown
+9de69c42f13f5f8b9856,2025-03-31,financed,Inactive 08-14,PAR 7,10,2052.0,34307,72452.0,18-25
+9fa2dcc6bc6924798460,2025-03-31,financed,Existing Active,Active,0,100.0,22439,10180.0,Unknown
+a123c361356427790d62,2025-03-31,financed,Blocked 31-60,PAR 30,49,11200.0,34199,47600.0,Unknown
+a14d7e35693a157a7751,2025-03-31,financed,Paid Off Loan,Paid Off,0,0.0,57599,0.0,Unknown
+a47c94cd84faa9342901,2025-03-31,financed,Existing Active,Active,0,100.0,82279,7800.0,Unknown
+a58d5d662554c81fa4f7,2025-03-31,financed,First Month Default without inventory over 30,FMD,216,35169.0,10610,57209.0,Unknown
+aa5516124f8165ffc10d,2025-03-31,financed,First Month Default without inventory over 30,FMD,380,35000.0,5899,35000.0,Unknown
+aca1ff0f0a23c4fbe3e4,2025-03-31,financed,Existing Active,Active,0,0.0,20699,28900.0,36-45
+acc0bc5400f6734077a9,2025-03-31,financed,First Month Default without inventory over 30,FMD,30,7900.0,20039,75840.0,26-35
+ad0fba449c22a9a89e68,2025-03-31,financed,Write Off,PAR 30,390,30800.0,14239,30800.0,Unknown
+b0d62dd6be54d5b9e378,2025-03-31,financed,Existing Active,Active,0,90.0,43249,8010.0,Unknown
+b43f50db7bf27d6dca9c,2025-03-31,financed,Paid Off Loan,Paid Off,0,100.0,94479,0.0,Unknown
+b59e3c6c77724dd2cd77,2025-03-31,financed,Cancelled Returned past 3 mths,Return,454,35200.0,13899,35200.0,Unknown
+b8f9e5c6aeff220ad449,2025-03-31,financed,Paid Off Loan,Paid Off,0,0.0,94079,0.0,Unknown
+bb77a6667c4988b13ba2,2025-03-31,financed,Existing Active,Active,0,0.0,20179,60400.0,26-35
+c925b7e7746b89ec2af9,2025-03-31,financed,Cancelled Returned past 3 mths,Return,290,26520.0,19039,26520.0,Unknown
+ca2bf7e46a9ae246ddb6,2025-03-31,financed,Write Off,PAR 30,135,30310.0,35339,57340.0,Unknown
+ccc45ab06aade1dbf179,2025-03-31,financed,New Active,Active,0,0.0,31769,93400.0,18-25
+d0ac24e1fe075a4e3209,2025-03-31,financed,Inactive 08-14,PAR 7,13,2200.0,18999,45100.0,26-35
+d4d4717708a457ec693b,2025-03-31,financed,Existing Active,Active,0,1580.0,45099,50780.0,Unknown
+db05d1477871a99a992d,2025-03-31,financed,Inactive 01-07,Inactive,1,1410.0,80109,20330.0,Unknown
+e86bf64c6e3c96002b61,2025-03-31,cash,Paid Off Cash,Paid Off,0,0.0,43999,0.0,Unknown
+f0198624a98262b27bd9,2025-03-31,financed,Paid Off Loan,Paid Off,0,0.0,69499,0.0,26-35
+f26e51d028e350994d9d,2025-03-31,financed,Existing Active,Active,0,0.0,33839,31080.0,Unknown
+f7470474e6450ad0c98b,2025-03-31,financed,Existing Active,Active,0,0.0,14149,47200.0,36-45
+f80ae8cd80381712b816,2025-03-31,financed,Existing Active,Active,0,0.0,18699,32560.0,26-35
+03b1d35938ae9de68c61,2025-06-30,cash,Paid Off Cash,Paid Off,0,0.0,0,0.0,18-25
+09174b9d84dac0834e25,2025-06-30,financed,Paid Off Loan,Paid Off,0,100.0,44379,0.0,Unknown
+09be46b94ab56e8ce6bc,2025-06-30,financed,Existing Active,Active,0,0.0,61798,12660.6,Unknown
+175310c65315c86bf745,2025-06-30,financed,Existing Active,Active,0,0.0,42209,27370.0,18-25
+1ba0583c69536d531383,2025-06-30,financed,Existing Active,Active,0,0.0,79459,20460.0,Unknown
+1de8958354496c1f0faf,2025-06-30,financed,Write Off,PAR 30,126,28600.0,29339,66520.0,26-35
+1f3184b3983af94b41bf,2025-06-30,financed,Existing Active,Active,0,0.0,22109,41580.0,18-25
+1f6767e6988a35d2549b,2025-06-30,financed,First 2 days Return,Return,86,25859.0,9899,67830.0,36-45
+1f722c15baa382ffc367,2025-06-30,financed,First 2 days Return,Return,298,35559.0,5319,36720.0,Unknown
+25d1f2313f8e13e28a69,2025-06-30,financed,New Active,Active,0,0.0,4530,57489.0,Unknown
+289abfc69d2cdc9673fa,2025-06-30,financed,Existing Active,Active,0,1025.0,31594,1025.0,Unknown
+28c6d08c3f1a12014173,2025-06-30,financed,First 2 days Return,Return,116,20699.0,0,44259.0,Unknown
+296d6e56a6a7a0c85e5d,2025-06-30,financed,Write Off,PAR 30,514,30820.0,8519,30820.0,Unknown
+29d07beb5c0eb662df9a,2025-06-30,financed,First Payment Default,FPD,20,2860.0,7499,51820.0,26-35
+2c8ed25119ef9c15a2b9,2025-06-30,financed,Write Off,PAR 30,279,40190.0,27629,40190.0,Unknown
+2e11305cbd4083893de2,2025-06-30,financed,Write Off,PAR 30,249,25520.0,10659,31280.0,Unknown
+2f2f086138519d243db4,2025-06-30,financed,Write Off,PAR 30,206,25800.0,15819,34400.0,Unknown
+2f938bf0fa59b20d6d41,2025-06-30,financed,First Month Default without inventory over 30,FMD,26,2960.0,7619,35520.0,26-35
+2fbd7969d8d464ab7302,2025-06-30,financed,First 2 days Return,Return,105,25349.0,0,66029.0,Unknown
+319505ec0dd0eaabf54e,2025-06-30,financed,Existing Active,Active,0,0.0,59919,48060.0,36-45
+34c463674907880aa4f2,2025-06-30,financed,New Active,Active,0,0.0,5799,35000.0,18-25
+34fbded274aa8a768e63,2025-06-30,financed,First Month Default without inventory over 30,FMD,381,63360.0,13779,63360.0,Unknown
+37eb67585d79931abde3,2025-06-30,financed,Cancelled Returned past 3 mths,Return,230,18020.0,11799,20820.0,Unknown
+3a07b299fba0f03b82f5,2025-06-30,financed,Write Off,PAR 30,410,55476.0,39103,55476.0,18-25
+3b67b02f7bc9c319e60c,2025-06-30,financed,Paid Off Loan,Paid Off,0,0.0,52199,0.0,Unknown
+3de22d5a55ee1344259b,2025-06-30,cash,Paid Off Cash,Paid Off,0,0.0,29999,0.0,18-25
+3f819f9953ce8155b7b7,2025-06-30,financed,Existing Active,Active,0,0.0,26039,63900.0,46-55
+4138eb139b68bab507c9,2025-06-30,financed,Write Off,PAR 30,255,56430.0,35729,56430.0,Unknown
+47376852403e2634394e,2025-06-30,financed,Write Off,PAR 30,349,60720.0,16419,60720.0,Unknown
+4d38e26c6c4b2b460445,2025-06-30,financed,Cancelled Returned past 3 mths,Return,323,25360.0,20199,25360.0,Unknown
+4ef4834fe5e100de6533,2025-06-30,financed,Paid Off Loan,Paid Off,0,0.0,78279,0.0,Unknown
+517a2c59baa39f3fcfc7,2025-06-30,financed,Cancelled Returned past 3 mths,Return,233,22220.0,23859,22220.0,26-35
+51eec519b824a9770844,2025-06-30,financed,Existing Active,Active,0,0.0,15699,59800.0,26-35
+525ed09f6b9d38eacf60,2025-06-30,financed,Existing Active,Active,0,0.0,45964,1935.0,Unknown
+53072c2924183556a285,2025-06-30,financed,Paid Off Loan,Paid Off,0,100.0,45439,0.0,Unknown
+5762404286123c101f26,2025-06-30,financed,Write Off,PAR 30,577,68619.0,18800,68619.0,Unknown
+588924ac2024e2b3a8aa,2025-06-30,financed,First Month Default without inventory over 30,FMD,621,73440.0,20119,73440.0,26-35
+58dc6062353291e10a42,2025-06-30,financed,Cancelled Returned past 3 mths,Return,361,53140.0,20899,53140.0,Unknown
+5a9f12a985fd9dbf92b3,2025-06-30,financed,Inactive 15-30,PAR 7,24,5320.0,33839,43890.0,36-45
+5b600c5097629f583daa,2025-06-30,financed,Existing Active,Active,0,1660.0,72019,24900.0,Unknown
+5f66cd20eca43496ee71,2025-06-30,financed,Existing Active,Active,0,0.0,44650,20789.0,Unknown
+60e3ec6c012d8fdb0902,2025-06-30,financed,Paid Off Loan,Paid Off,0,0.0,57399,0.0,Unknown
+64f5ea254fdbc44b6323,2025-06-30,lost,Existing Active,Active,0,0.0,29099,34650.0,26-35
+6629f41f9a49a80bcc8b,2025-06-30,financed,Write Off,PAR 30,99,17600.0,18239,50640.0,26-35
+66f46c70eba8d79addd2,2025-06-30,financed,First Month Default without inventory over 30,FMD,289,78540.0,15739,93500.0,Unknown
+67ab967326edbd28a257,2025-06-30,financed,Cancelled Returned in 3 mths,Return,258,29969.0,8730,39689.0,Unknown
+6af18a840be6f2f507c5,2025-06-30,cash,Paid Off Cash,Paid Off,0,0.0,47499,0.0,Unknown
+6af8d40879d1bf4fb6b0,2025-06-30,financed,Existing Active,Active,0,0.0,58139,49840.0,Unknown
+6c3fa020d972e03fc965,2025-06-30,financed,Write Off,PAR 30,129,47790.0,54309,119340.0,18-25
+6d4d9d125f5a01024129,2025-06-30,financed,Paid Off Loan,Paid Off,0,20.0,42419,0.0,Unknown
+6ea66b351b7d4767013d,2025-06-30,financed,Write Off,PAR 30,557,32560.0,11919,32560.0,Unknown
+70dc6557fd25f12e2f6a,2025-06-30,financed,Existing Active,Active,0,610.0,42869,610.0,Unknown
+75395ccb4e7ef84ec08c,2025-06-30,financed,First 2 days Return,Return,11,8249.0,0,39989.0,Unknown
+759a966b6fe66614a71b,2025-06-30,financed,Cancelled Returned in 3 mths,Return,79,9240.0,5599,39270.0,26-35
+772d665c2174738db740,2025-06-30,financed,Write Off,PAR 30,516,50740.0,20619,50740.0,Unknown
+78429fc979c72c5b0899,2025-06-30,financed,Existing Active,Active,0,3780.0,50219,11239.6,46-55
+78b20fb28daea33a05d7,2025-06-30,financed,Cancelled Returned past 3 mths,Return,78,9240.0,14839,30030.0,Unknown
+7cc979c1afa9b238b4d4,2025-06-30,financed,Existing Active,Active,0,2740.0,45399,2740.0,Unknown
+7e6ae8f19b3ec28952be,2025-06-30,cash,Paid Off Cash,Paid Off,0,0.0,24999,0.0,Unknown
+80665244a79a9e9e6711,2025-06-30,financed,First 2 days Return,Return,257,37319.0,6359,43860.0,Unknown
+813c6c81a6bf581c5711,2025-06-30,financed,First Month Default with inventory,Return,182,38070.0,10509,71910.0,26-35
+842c9433a4c01a0651d0,2025-06-30,financed,First 2 days Return,Return,3,7699.0,0,62779.0,Unknown
+84c8fe02c7c52e4eb9ef,2025-06-30,financed,First Month Default without inventory over 30,FMD,431,62140.0,13959,62140.0,Unknown
+84d6bb71dc17288ca01c,2025-06-30,cash,Paid Off Cash,Paid Off,0,0.0,42999,0.0,Unknown
+8872c7f7064134cbef67,2025-06-30,financed,Paid Off Loan,Paid Off,0,980.0,50279,0.0,Unknown
+8b28bbe644166f0dbd55,2025-06-30,financed,Existing Active,Active,0,13780.0,107879,25180.0,Unknown
+913a53c8440c8d1de7d9,2025-06-30,financed,New Active,Active,0,0.0,9579,59000.0,26-35
+9425f355a038a696c0ab,2025-06-30,financed,Paid Off Loan,Paid Off,0,100.0,54179,0.0,Unknown
+952ffe4f190ef66431bb,2025-06-30,financed,Blocked 61-90,PAR 30,86,12220.0,21879,32900.0,18-25
+955dbef2f4b002f33735,2025-06-30,financed,Existing Active,Active,0,0.0,12799,32070.0,26-35
+962d503bad2a1d21c58a,2025-06-30,financed,Existing Active,Active,0,0.0,14499,40850.0,36-45
+9a371f3d374af1e04fe2,2025-06-30,financed,Paid Off Loan,Paid Off,0,100.0,81099,0.0,Unknown
+9c70dee6ff1ae0e7d9b8,2025-06-30,financed,Existing Active,Active,0,0.0,16499,52000.0,Unknown
+9cd02df22e6008665da9,2025-06-30,financed,First Month Default without inventory over 30,FMD,124,28610.0,15499,79490.0,26-35
+9cf50bd9598edb81f9de,2025-06-30,financed,First Payment Default,FPD,595,37740.0,6739,37740.0,Unknown
+a8449606c209d9b76fae,2025-06-30,financed,First Payment Default,FPD,48,11480.0,15799,83640.0,26-35
+a9f02200f5a27673106b,2025-06-30,financed,Paid Off Loan,Paid Off,0,30640.0,82999,0.0,Unknown
+ad11e9a75f251a576d18,2025-06-30,financed,Cancelled Returned past 3 mths,Return,338,64860.0,15399,64860.0,26-35
+ae5faed44f0c1ebfdcd7,2025-06-30,financed,Write Off,PAR 30,224,22670.0,43589,22670.0,Unknown
+b27e7bb725b85b290f1b,2025-06-30,financed,Write Off,PAR 30,111,21160.0,20659,57070.0,36-45
+b6f355eedabaa831202f,2025-06-30,financed,Existing Active,Active,0,0.0,16399,18600.0,18-25
+b91822f8c82e3f543aee,2025-06-30,financed,First Month Default without inventory over 30,FMD,594,36810.0,7669,36810.0,Unknown
+bace0d0ca25a7e4228f1,2025-06-30,cash,Paid Off Cash,Paid Off,0,0.0,29499,0.0,Unknown
+bf63efbb067e5cc63e78,2025-06-30,financed,Existing Active,Active,0,4559.0,41000,4559.0,Unknown
+c31398006961c46cc7b2,2025-06-30,financed,First Month Default without inventory over 30,FMD,467,34800.0,6099,34800.0,Unknown
+c727ef9d042e55ce6bdc,2025-06-30,financed,First Payment Default,FPD,289,36120.0,6359,43860.0,Unknown
+ca2bc0491002bf4a6212,2025-06-30,financed,Paid Off Loan,Paid Off,0,0.0,77079,0.0,Unknown
+d35b70c207d4997fac9e,2025-06-30,financed,Existing Active,Active,0,0.0,16999,58500.0,26-35
+d63e5bb2d13d37fea357,2025-06-30,financed,Existing Active,Active,0,0.0,13549,41800.0,26-35
+da2c8c62dce9e1380e2e,2025-06-30,financed,Write Off,PAR 30,507,66980.0,24979,66980.0,Unknown
+dcf9ebc84812ef628576,2025-06-30,financed,Write Off,PAR 30,117,14520.0,16679,33440.0,26-35
+dede4be304d6f92481bf,2025-06-30,financed,Write Off,PAR 30,129,13110.0,8449,31740.0,18-25
+e15b864f7626f7fbc70c,2025-06-30,financed,Inactive 08-14,PAR 7,12,2520.0,41589,53400.0,36-45
+e3af31e543150d4acb3a,2025-06-30,financed,Inactive 08-14,PAR 7,13,1700.0,30049,19550.0,26-35
+e61aa4a8069af579728c,2025-06-30,financed,Existing Active,Active,0,0.0,59689,108680.0,36-45
+e6d9682ec0afacad194e,2025-06-30,financed,Paid Off Loan,Paid Off,0,100.0,45459,0.0,Unknown
+e7770d4eeca01e4ea9ec,2025-06-30,financed,Existing Active,Active,0,0.0,20299,35050.0,Unknown
+e84611a0060d279ed734,2025-06-30,financed,First Payment Default,FPD,138,21842.0,8157,55942.0,26-35
+e9ca92229e90de5e7552,2025-06-30,financed,Existing Active,Active,0,0.0,20099,57630.0,46-55
+f25ebfe0fc46b747c168,2025-06-30,financed,Existing Active,Active,0,0.0,17149,42780.0,26-35
+f32af46a1c97d1d981c2,2025-06-30,financed,First Payment Default,FPD,224,46200.0,10399,71400.0,Unknown
+f3bd3193c98780d888b5,2025-06-30,financed,Blocked 31-60,PAR 30,44,7490.0,16559,46010.0,26-35
+f5d2042f1959e55ecd12,2025-06-30,financed,Paid Off Loan,Paid Off,0,780.0,44779,0.0,Unknown
+f7194fc30c6f6ca18c77,2025-06-30,financed,Existing Active,Active,0,0.0,16819,46870.0,18-25
+f9f5a7dd0342b08d165b,2025-06-30,lost,Lost Write Off,PAR 30,73,7370.0,11599,27470.0,26-35
+fadd7efc82e59e55e61c,2025-06-30,financed,Paid Off Loan,Paid Off,0,100.0,45439,0.0,Unknown
+faf873c6e955cfe6bc24,2025-06-30,financed,First Payment Default,FPD,252,29970.0,7109,41310.0,Unknown
+ff252f2a4d094b60fd5b,2025-06-30,financed,First Payment Default,FPD,724,55080.0,8079,55080.0,Unknown
+ff9fea3581c0d863b764,2025-06-30,financed,Existing Active,Active,0,100.0,70629,1330.0,Unknown
+ffe3b4f09240d4cd3e08,2025-06-30,financed,Cancelled Returned past 3 mths,Return,299,36640.0,11489,39250.0,36-45
+0021e441da37120664b3,2025-09-30,financed,Blocked 61-90,PAR 30,73,9350.0,22349,27200.0,26-35
+02972d1beed1811f3759,2025-09-30,financed,Write Off,PAR 30,132,11100.0,14899,20100.0,26-35
+050592349a5d228f1665,2025-09-30,financed,Existing Active,Active,0,1620.0,52499,42120.0,26-35
+0ddb0e1fdae075b4ddf2,2025-09-30,financed,Existing Active,Active,0,0.0,60079,39360.0,18-25
+18aa9559c52c6ee853b3,2025-09-30,financed,Existing Active,Active,0,13050.0,88429,13050.0,Unknown
+1ce46de3d2691ab144a2,2025-09-30,financed,Write Off,PAR 30,243,42880.0,35399,42880.0,Unknown
+1d1e0f6d8572e2b83fe2,2025-09-30,financed,Existing Active,Active,0,0.0,27959,42350.0,26-35
+1d70822bc844833de913,2025-09-30,financed,Inactive 15-30,PAR 7,27,3050.0,17949,26920.0,36-45
+204f6cf18c3ee976fb91,2025-09-30,financed,Cancelled Returned past 3 mths,Return,455,35200.0,31999,35200.0,Unknown
+20cfd5b349670ce52ded,2025-09-30,financed,Existing Active,Active,0,0.0,13649,28600.0,Unknown
+255eddf359796a3f5554,2025-09-30,financed,Inactive 15-30,PAR 7,27,3680.0,41679,11960.0,36-45
+29f85deea01da2b4c669,2025-09-30,financed,Existing Active,Active,0,0.0,24729,34590.0,26-35
+2a792fbc47323b42f99d,2025-09-30,financed,Existing Active,Active,0,0.0,7899,30360.0,26-35
+2fa9230db610dd1b7e95,2025-09-30,financed,First Payment Default,FPD,535,64080.0,9939,64080.0,Unknown
+30df15f3df1df4f63a72,2025-09-30,financed,First Month Default without inventory over 30,FMD,4,910.0,9129,43680.0,36-45
+344ae65898eae7893661,2025-09-30,financed,Paid Off Loan,Paid Off,0,100.0,171299,0.0,Unknown
+3921eb4122552f9f5a12,2025-09-30,financed,Cancelled Returned past 3 mths,Return,500,65280.0,9779,65280.0,Unknown
+3a8fc90271de18f54c57,2025-09-30,financed,First Month Default without inventory over 30,FMD,812,50079.0,11000,50079.0,Unknown
+3b23ba2cdba63e3adb2a,2025-09-30,financed,Existing Active,Active,0,0.0,16039,13770.0,36-45
+3c20bfd88edfd9e4d061,2025-09-30,financed,Existing Active,Active,0,0.0,52359,16520.0,18-25
+3cee69e1227c09e4481a,2025-09-30,financed,Existing Active,Active,0,0.0,19579,43200.0,36-45
+3fbc0a6a1626d104ad70,2025-09-30,financed,Inactive 15-30,PAR 7,22,6579.0,38480,51939.0,Unknown
+40573ae2b4ae12a2eabd,2025-09-30,financed,Existing Active,Active,0,0.0,97589,27580.0,26-35
+419babe396cb0b2a04ab,2025-09-30,financed,Existing Active,Active,0,0.0,15479,53100.0,26-35
+42eb881b4966e0e91560,2025-09-30,financed,First Month Default with inventory,Return,32,5650.0,10499,66830.0,26-35
+453476153acad50ce927,2025-09-30,financed,Paid Off Loan,Paid Off,0,0.0,81199,0.0,Unknown
+46a610bc75c334dd6973,2025-09-30,financed,Existing Active,Active,0,0.0,34899,64370.0,36-45
+4d15d887d80a6d05c18a,2025-09-30,financed,Existing Active,Active,0,0.0,15909,41580.0,26-35
+4dda937853307d222d2f,2025-09-30,financed,Cancelled Returned past 3 mths,Return,395,84100.0,18399,84100.0,Unknown
+4e2b456eb90aca019259,2025-09-30,financed,Paid Off Loan,Paid Off,0,0.0,47599,0.0,Unknown
+4e51f12060029e6809bc,2025-09-30,financed,Write Off,PAR 30,344,58780.0,21379,58780.0,Unknown
+509731282cc1bc969c03,2025-09-30,financed,Write Off,PAR 30,512,66780.0,30899,66780.0,Unknown
+53c01f5c6628d6314cf4,2025-09-30,financed,Existing Active,Active,0,0.0,25650,55799.0,Unknown
+5476be7555bd0f359a52,2025-09-30,financed,Blocked 61-90,PAR 30,82,25200.0,25099,98700.0,Unknown
+57bd3e3ff4ac6d4ad600,2025-09-30,financed,Inactive 15-30,PAR 7,22,5200.0,31299,44200.0,18-25
+5d187d9d783ff746e00e,2025-09-30,financed,New Active,Active,0,0.0,12159,65170.0,18-25
+5f7a987eccc0590ed157,2025-09-30,cash,Paid Off Cash,Paid Off,0,0.0,51499,0.0,Unknown
+5ff8d12cbfa0c5ba6db3,2025-09-30,financed,Inactive 01-07,Inactive,7,2570.0,71349,26870.0,Unknown
+6026b2cc7185f40cdb6f,2025-09-30,financed,Existing Active,Active,0,0.0,31119,40920.0,36-45
+610294d85e0d8bb762a1,2025-09-30,financed,First Payment Default,FPD,262,50540.0,9829,67830.0,Unknown
+62172a5887d4d7ab9835,2025-09-30,lost,Lost Write Off,PAR 30,113,28199.0,60990,36549.0,Unknown
+651bebced6d1cc5f12f5,2025-09-30,financed,First Payment Default,FPD,405,70362.0,9897,70362.0,Unknown
+6cfbdbb076696b87979f,2025-09-30,financed,Write Off,PAR 30,321,86740.0,46319,86740.0,Unknown
+704e8ebdec21ed5d69b5,2025-09-30,cash,Paid Off Cash,Paid Off,0,0.0,45999,0.0,56+
+739254611689aa2afb0d,2025-09-30,financed,Blocked 61-90,PAR 30,67,12000.0,28799,47100.0,56+
+748a2c8f1819eea1a5e1,2025-09-30,financed,Blocked 61-90,PAR 30,90,12291.0,18358,36991.0,36-45
+77d9e9d88d71904b3090,2025-09-30,financed,Existing Active,Active,0,0.0,27189,45870.0,Unknown
+78a75e87faff889976b2,2025-09-30,financed,New Active,Active,0,0.0,7219,51000.0,56+
+78c44170e34d3c3bdc1f,2025-09-30,financed,New Active,Active,0,0.0,10999,57580.0,26-35
+7a86ec66942d466849c9,2025-09-30,financed,Existing Active,Active,0,0.0,26679,32640.0,36-45
+7bbd6a875f0b906b13ff,2025-09-30,financed,Existing Active,Active,0,0.0,30379,39930.0,26-35
+7ce287f606e060693f36,2025-09-30,financed,Cancelled Returned in 3 mths,Return,180,19240.0,6139,37000.0,Unknown
+7e316e7adb446187c605,2025-09-30,financed,First Month Default without inventory over 30,FMD,22,6199.0,22600,97999.0,Unknown
+7e68947f18a4d62d8084,2025-09-30,financed,Paid Off Loan,Paid Off,0,100.0,44379,0.0,Unknown
+7f744eb0a8ffb9ca702e,2025-09-30,financed,Paid Off Loan,Paid Off,0,0.0,46119,0.0,Unknown
+808de613938ed9308e79,2025-09-30,financed,Cancelled Returned past 3 mths,Return,233,22780.0,12909,26130.0,Unknown
+84bcc40c94c245d5e569,2025-09-30,financed,Blocked 61-90,PAR 30,76,9850.0,15099,40250.0,36-45
+84dac131445e4a541f1e,2025-09-30,financed,Existing Active,Active,0,0.0,29759,25590.0,Unknown
+85724ccdf56e50b7f681,2025-09-30,financed,Existing Active,Active,0,0.0,37799,42780.0,18-25
+87bcb6717bf17ce102ee,2025-09-30,financed,Existing Active,Active,0,0.0,32159,5120.0,26-35
+89881a58fb8bb30cdb17,2025-09-30,financed,Existing Active,Active,0,1030.0,27769,2050.0,Unknown
+89b88734a280974bbf7b,2025-09-30,financed,Existing Active,Active,0,0.0,18299,44900.0,36-45
+8cec8180909c68fd64fb,2025-09-30,financed,First Month Default without inventory over 30,FMD,511,75261.0,16378,75261.0,Unknown
+8d5a1211b5170d79b966,2025-09-30,financed,Inactive 15-30,PAR 7,16,4140.0,42279,41400.0,18-25
+8e5e0c40192fc0ef42d3,2025-09-30,financed,New Active,Active,0,0.0,15599,30550.0,18-25
+929e865526d66a17addb,2025-09-30,financed,Cancelled Returned past 3 mths,Return,635,66220.0,33019,66220.0,Unknown
+98cb3432e01e5db89fea,2025-09-30,financed,Write Off,PAR 30,112,23460.0,15719,64860.0,26-35
+9a8992d6ed7d1e6b346d,2025-09-30,financed,Cancelled Returned past 3 mths,Return,504,78540.0,14539,78540.0,Unknown
+9b82b701da39c3b3bf0b,2025-09-30,financed,Existing Active,Active,0,0.0,9879,28380.0,26-35
+9be57962e668e8c9a277,2025-09-30,financed,Paid Off Loan,Paid Off,0,95.0,44384,0.0,Unknown
+9d56f16b811432323972,2025-09-30,financed,Write Off,PAR 30,165,33200.0,40199,41600.0,Unknown
+9d9859d3e5802326b838,2025-09-30,financed,Existing Active,Active,0,0.0,10319,29670.0,26-35
+9e2553e7414274229b01,2025-09-30,financed,Blocked 31-60,PAR 30,39,8250.0,17159,64650.0,26-35
+9e7347a82e6039cff9f2,2025-09-30,cash,Paid Off Cash,Paid Off,0,0.0,34999,0.0,Unknown
+a11c49ee80e294de7b93,2025-09-30,financed,Cancelled Returned past 3 mths,Return,101,12750.0,17249,32300.0,18-25
+a3a94d5e6502bb0d4f9d,2025-09-30,financed,First 2 days Return,Return,136,45899.0,0,97099.0,Unknown
+a3d54f0ffaa5dd99b591,2025-09-30,financed,Paid Off Loan,Paid Off,0,100.0,45459,0.0,Unknown
+a463d52741cdd5fec4bd,2025-09-30,financed,Write Off,PAR 30,200,42630.0,16779,69090.0,18-25
+a5407fe826525d422a95,2025-09-30,financed,Write Off,PAR 30,273,47200.0,18219,50740.0,Unknown
+a6106a0ebc37e82f7c87,2025-09-30,lost,Lost Write Off,PAR 30,40,7080.0,16659,51920.0,46-55
+a6431f2aac4c2af0b4dd,2025-09-30,financed,Blocked 31-60,PAR 30,50,7550.0,17399,37950.0,26-35
+a8fdf47ff406687212b1,2025-09-30,financed,New Active,Active,0,0.0,12899,57120.0,18-25
+a924395fda9d36622f12,2025-09-30,financed,Paid Off Loan,Paid Off,0,0.0,77129,0.0,Unknown
+aaaa28871d64a6ad8be1,2025-09-30,financed,Paid Off Loan,Paid Off,0,0.0,90039,0.0,Unknown
+b3415542b8d4a6bb094c,2025-09-30,financed,Paid Off Loan,Paid Off,0,22379.0,55900,0.0,Unknown
+b6f1f38a8bb2e67df18b,2025-09-30,financed,Existing Active,Active,0,0.0,50619,95040.0,Unknown
+b997c8e4d9a3aac32dc7,2025-09-30,financed,Paid Off Loan,Paid Off,0,12360.0,67899,0.0,Unknown
+bb7f8e89356a7a6cb988,2025-09-30,financed,Write Off,PAR 30,393,50760.0,12399,50760.0,Unknown
+bd01a71391ab41f9e4c9,2025-09-30,financed,Inactive 15-30,PAR 7,24,6240.0,68659,32160.0,36-45
+bdf76b973ab7419861f5,2025-09-30,financed,Write Off,PAR 30,300,31960.0,45179,31960.0,Unknown
+bf135ae6b9fff1c402ad,2025-09-30,financed,Paid Off Loan,Paid Off,0,100.0,57299,0.0,Unknown
+bfbc09a35f594c32fa3b,2025-09-30,financed,Existing Active,Active,0,0.0,15450,70299.0,26-35
+c2e4cfd1cc3457eb1efc,2025-09-30,financed,Write Off,PAR 30,150,23980.0,31969,31610.0,46-55
+c3ad156a988aea9c494c,2025-09-30,financed,Existing Active,Active,0,0.0,33499,35030.0,26-35
+c6452abec20922dd30f1,2025-09-30,financed,Cancelled Returned in 3 mths,Return,224,22580.0,9319,30860.0,18-25
+c67e199df5545febf5f3,2025-09-30,financed,New Active,Active,0,1130.0,11389,54240.0,26-35
+c791d0cb2c4fc21999d7,2025-09-30,financed,Existing Active,Active,0,0.0,55239,39750.0,26-35
+c8117a85535c986131ae,2025-09-30,financed,Existing Active,Active,0,0.0,12899,72850.0,Unknown
+cb428e73f8efe846380e,2025-09-30,financed,Blocked 61-90,PAR 30,70,16390.0,67609,19370.0,Unknown
+cb9f7e32464d5bcbcb52,2025-09-30,cash,Paid Off Cash,Paid Off,0,0.0,46999,0.0,Unknown
+cda2bcf09d5e9b2a4752,2025-09-30,financed,First Payment Default,FPD,209,39600.0,9799,67320.0,26-35
+d073cdeca3e228c7b089,2025-09-30,financed,Existing Active,Active,0,0.0,33699,21650.0,26-35
+d07a287a556e00270883,2025-09-30,financed,Write Off,PAR 30,276,20405.0,25674,20405.0,Unknown
+d1e10fedfd7bf97018e2,2025-09-30,financed,First Payment Default,FPD,194,29400.0,10199,53550.0,26-35
+d277760842b1c0f5c38e,2025-09-30,financed,Paid Off Loan,Paid Off,0,0.0,67819,0.0,Unknown
+d2b20f9f69d8c31f9885,2025-09-30,financed,New Active,Active,0,0.0,9129,43680.0,26-35
+d39578fd9d90799ff43f,2025-09-30,financed,Paid Off Loan,Paid Off,0,2580.0,74499,0.0,Unknown
+d42f26662965196a4972,2025-09-30,financed,First Month Default without inventory over 30,FMD,184,26320.0,10979,47320.0,26-35
+d90282b4df8b561680ba,2025-09-30,cash,Paid Off Cash,Paid Off,0,0.0,33499,0.0,Unknown
+dec9f44b1edacbb22fa3,2025-09-30,cash,Paid Off Cash,Paid Off,0,0.0,27500,0.0,Unknown
+e0e09da1c04603faad7d,2025-09-30,financed,Paid Off Loan,Paid Off,0,0.0,45039,0.0,Unknown
+e21411b5a6a3dffb921f,2025-09-30,financed,Write Off,PAR 30,97,17060.0,23659,47560.0,26-35
+e22407d9a2eff242646d,2025-09-30,financed,First Month Default without inventory over 30,FMD,428,32160.0,7179,32160.0,Unknown
+e24357f99a17e90e29a3,2025-09-30,financed,Existing Active,Active,0,0.0,41169,24860.0,26-35
+e78646c891911cdaa0c6,2025-09-30,financed,Existing Active,Active,0,0.0,34809,18200.0,26-35
+e7e0d00e31c06a43160d,2025-09-30,financed,First Month Default with inventory,Return,299,19780.0,5199,21620.0,36-45
+ebab4d6783f4acdd0378,2025-09-30,financed,Write Off,PAR 30,104,11100.0,9839,33300.0,26-35
+eebfdb57127dd48e5607,2025-09-30,financed,Existing Active,Active,0,0.0,5549,20700.0,26-35
+efac9a9c006f0f0a14d7,2025-09-30,financed,Existing Active,Active,0,0.0,29319,55440.0,36-45
+f7194fc30c6f6ca18c77,2025-09-30,financed,Existing Active,Active,0,0.0,32079,31610.0,18-25
+f8b984e100775648c89e,2025-09-30,financed,Inactive 08-14,PAR 7,10,1820.0,10039,42770.0,26-35
+f9005e02b0a8a377dcaf,2025-09-30,financed,Paid Off Loan,Paid Off,0,100.0,58339,0.0,Unknown
+fa4aef654c666eb5ae00,2025-09-30,financed,Write Off,PAR 30,269,37132.0,43127,37132.0,Unknown
+fc6b12cab2d14a966d98,2025-09-30,financed,First Month Default without inventory over 30,FMD,312,52762.0,12657,56302.0,Unknown
+fe5804e53adec2587b3b,2025-09-30,financed,First Month Default without inventory over 30,FMD,17,2710.0,8239,44570.0,18-25
+00bcaa451a21c763c0bf,2025-12-30,cash,Paid Off Cash,Paid Off,0,0.0,26999,0.0,Unknown
+01adf4d33180abd20145,2025-12-30,financed,Inactive 15-30,PAR 7,24,4720.0,34359,34220.0,36-45
+0218cd9281ce9b178c9e,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,94989,0.0,36-45
+03ff02c7db87746415b0,2025-12-30,financed,Write Off,PAR 30,171,24950.0,44629,24950.0,26-35
+05bfb25672f596b9a0b6,2025-12-30,financed,Existing Active,Active,0,0.0,24449,57120.0,26-35
+096364cc9ca25f3f6e2a,2025-12-30,financed,Blocked 31-60,PAR 30,43,8680.0,32359,39680.0,18-25
+0c8cd012aedc4e8346ca,2025-12-30,financed,New Active,Active,0,0.0,15309,65760.0,26-35
+0dca14e0f8e61e536e8f,2025-12-30,financed,First Month Default without inventory over 30,FMD,515,55680.0,12139,55680.0,Unknown
+11ebab646194f004b18a,2025-12-30,financed,First Month Default with inventory,Return,446,43860.0,6359,43860.0,Unknown
+13104e7e89dd06265763,2025-12-30,financed,Cancelled Returned in 3 mths,Return,721,68850.0,12349,68850.0,Unknown
+16e69e3ee2307f484d89,2025-12-30,financed,Existing Active,Active,0,0.0,21199,19600.0,26-35
+1737eade5ca4230969b9,2025-12-30,financed,Cancelled Returned past 3 mths,Return,99,16200.0,19579,43200.0,26-35
+1843ace44f1967c74478,2025-12-30,financed,Paid Off Loan,Paid Off,0,50.0,45509,0.0,Unknown
+1852b59b1b4c2b363a34,2025-12-30,financed,Inactive 01-07,Inactive,1,770.0,30239,14630.0,26-35
+1884c830b002b80bf8b8,2025-12-30,financed,Existing Active,Active,0,0.0,35959,53960.0,26-35
+198f45a564ed8163cd3b,2025-12-30,financed,First Payment Default,FPD,471,43860.0,6359,43860.0,Unknown
+19dc178fb54e555c6be4,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,37279,0.0,18-25
+1a3de5eeb8977b501b30,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,40849,0.0,Unknown
+1c5a1c400c2ae5b94e23,2025-12-30,financed,Existing Active,Active,0,0.0,14499,29180.0,18-25
+1cd35c4acd6842a2fbef,2025-12-30,financed,Paid Off Loan,Paid Off,0,100.0,44379,0.0,Unknown
+1d6cdcd18f93815f7f64,2025-12-30,financed,Paid Off Loan,Paid Off,0,100.0,80159,0.0,Unknown
+1eb9a02e44a337d32811,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,68959,0.0,Unknown
+1ee8261faf24f7e2e972,2025-12-30,financed,Blocked 31-60,PAR 30,41,4610.0,27169,17700.0,26-35
+2079d85ac4c2c8e648c4,2025-12-30,financed,Blocked 31-60,PAR 30,57,13710.0,68559,26430.0,26-35
+209009449279bc312043,2025-12-30,lost,Lost Write Off,PAR 30,67,28200.0,59599,95880.0,Unknown
+20915961a95106ab1683,2025-12-30,financed,Existing Active,Active,0,0.0,24419,57150.0,26-35
+21ed066fa6f709971f9e,2025-12-30,financed,Existing Active,Active,0,960.0,13819,51120.0,26-35
+2201c9f49c26fc843f5c,2025-12-30,financed,Write Off,PAR 30,719,42745.0,14654,42745.0,Unknown
+23b3e156b558caefc54f,2025-12-30,financed,Blocked 31-60,PAR 30,42,6370.0,21209,36400.0,26-35
+25e8082b806eed8429ae,2025-12-30,financed,Inactive 01-07,Inactive,2,950.0,41099,14250.0,36-45
+28bf6d37d84143563880,2025-12-30,financed,Existing Active,Active,0,1050.0,18799,40950.0,26-35
+2e2dd449e3325e5da717,2025-12-30,financed,Blocked 31-60,PAR 30,32,3120.0,33429,4420.0,Unknown
+2fa0f1fe8b73e23637f8,2025-12-30,financed,Paid Off Loan,Paid Off,0,100.0,48999,0.0,Unknown
+3120d97d0322119631f1,2025-12-30,financed,Blocked 61-90,PAR 30,74,16150.0,36879,48490.0,26-35
+31a05d8d7989e0bce401,2025-12-30,financed,Write Off,PAR 30,152,3740.0,46479,3740.0,Unknown
+34f49fd2a450c91a6390,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,67819,0.0,Unknown
+3ba0fe3b6c98116c7503,2025-12-30,financed,Existing Active,Active,0,0.0,29459,23790.0,36-45
+3fef6fdfcce040c5e5f0,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,99919,0.0,Unknown
+4306efd3070198a3aacd,2025-12-30,financed,Write Off,PAR 30,434,35300.0,15959,35300.0,Unknown
+43e4f8b79c4c12aefd89,2025-12-30,financed,Existing Active,Active,0,0.0,40549,78910.0,26-35
+440acc78c11f02f08970,2025-12-30,financed,Paid Off Loan,Paid Off,0,100.0,57299,0.0,Unknown
+45bffac4fd3784b8a5e8,2025-12-30,financed,Existing Active,Active,0,0.0,29639,79980.0,Unknown
+4b20f87d5eafd892e52f,2025-12-30,financed,Write Off,PAR 30,332,39540.0,18239,39540.0,Unknown
+4dc193c39978e5a43071,2025-12-30,financed,Paid Off Loan,Paid Off,0,100.0,89979,0.0,Unknown
+50e493dd127430f28a16,2025-12-30,financed,Blocked 61-90,PAR 30,67,7330.0,79649,7330.0,26-35
+51d3401c43bdc13bd7d2,2025-12-30,financed,Write Off,PAR 30,124,21780.0,18279,52030.0,18-25
+527fa1adc426f5933473,2025-12-30,financed,First Payment Default,FPD,60,9720.0,8899,55080.0,56+
+55dfc5204a148dfcd4e5,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,109199,0.0,26-35
+5623231aba5c468d2bfd,2025-12-30,cash,Paid Off Cash,Paid Off,0,0.0,38999,0.0,Unknown
+59b946365e06d59f4aee,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,107439,0.0,Unknown
+5ad38c2302453d4a87e5,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,47899,0.0,Unknown
+5f5ee875612f242cd7d5,2025-12-30,financed,Write Off,PAR 30,533,37120.0,8959,37120.0,Unknown
+5fcd5e59864e1c7400b5,2025-12-30,financed,First Month Default without inventory 01-07,Inactive,3,1749.0,17360,85749.0,26-35
+63c5fefa6c0c3b45c33b,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,18224,0.0,Unknown
+63dcb6f0e5d5a1d72bdf,2025-12-30,financed,Write Off,PAR 30,100,19500.0,38599,40300.0,26-35
+68aafcea61a53938677f,2025-12-30,financed,Write Off,PAR 30,158,21850.0,16399,38950.0,18-25
+698c1fac6bd07f6e1001,2025-12-30,financed,New Active,Active,0,0.0,7329,38880.0,18-25
+699dff6fcbc2d26fa3c4,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,43479,0.0,Unknown
+69cc908c115e2220b35d,2025-12-30,financed,Existing Active,Active,0,0.0,90259,4730.0,26-35
+6a67333bbc81acd9ac34,2025-12-30,financed,Existing Active,Active,0,0.0,69979,29460.0,26-35
+6cc1a546e3a3c2cfeabb,2025-12-30,financed,New Active,Active,0,0.0,23000,91239.0,36-45
+6d00eb0aed47a2f5a026,2025-12-30,financed,Existing Active,Active,0,0.0,8269,18040.0,46-55
+6dcc3ca5a976e6c04e09,2025-12-30,financed,Inactive 01-07,Inactive,4,1100.0,13199,49500.0,26-35
+6e88819af09561de4f44,2025-12-30,financed,Existing Active,Active,0,0.0,75999,18990.0,36-45
+6e94af950a52e48d9e95,2025-12-30,financed,Inactive 01-07,Inactive,4,1140.0,15919,49020.0,26-35
+6ebd0d13fce7c4c8a24b,2025-12-30,financed,First Payment Default,FPD,150,15180.0,4799,35190.0,26-35
+739f4bf7c17c029dbef4,2025-12-30,financed,First Month Default without inventory over 30,FMD,266,41720.0,9079,53490.0,26-35
+765519c363d5b59e2572,2025-12-30,financed,Inactive 08-14,PAR 7,11,2600.0,53799,22100.0,26-35
+76ba45b7c535967940c9,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,91159,0.0,26-35
+7ca266e972d4fe4c3410,2025-12-30,cash,Paid Off Cash,Paid Off,0,0.0,22999,0.0,18-25
+8048dac9c73420c11ddb,2025-12-30,lost,Lost Write Off,PAR 30,520,31280.0,22559,31280.0,Unknown
+809c67b2eebc3a1e7469,2025-12-30,financed,Cancelled Returned past 3 mths,Return,640,33760.0,15419,33760.0,Unknown
+80dc3af41fd173e5fd3b,2025-12-30,financed,First Payment Default,FPD,12,2080.0,6199,53040.0,26-35
+81ad9fa413c97195841f,2025-12-30,financed,Write Off,PAR 30,311,22780.0,57479,22780.0,Unknown
+820d0643625793a25f86,2025-12-30,financed,Existing Active,Active,0,0.0,24499,28310.0,26-35
+822f644bee4b1bc6b982,2025-12-30,financed,New Active,Active,0,810.0,4899,41310.0,36-45
+83000ca8dc25e1fd26a5,2025-12-30,financed,Write Off,PAR 30,357,41500.0,38759,41500.0,Unknown
+8437954c0391f8abc107,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,51259,0.0,26-35
+855d58ae3b9ff6511341,2025-12-30,financed,Cancelled Returned past 3 mths,Return,519,44330.0,43529,44330.0,Unknown
+898b86312dd2827000a8,2025-12-30,financed,Blocked 61-90,PAR 30,81,6650.0,33529,6650.0,26-35
+8a100047c5f6d538afb8,2025-12-30,financed,Existing Active,Active,0,0.0,31459,31320.0,26-35
+8abbd6616bbd4c8501ec,2025-12-30,financed,Existing Active,Active,0,0.0,36399,8470.0,26-35
+8f0e636ec5e0e1d40a47,2025-12-30,financed,New Active,Active,0,0.0,35579,66720.0,26-35
+8f9a698f667eb0976d14,2025-12-30,financed,Existing Active,Active,0,0.0,48259,36500.0,26-35
+8fecb447abc10c1c0d3c,2025-12-30,financed,First Payment Default,FPD,678,39270.0,6269,39270.0,Unknown
+919ad3c735b80824b287,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,120099,0.0,Unknown
+93010ebdbd71ffe9e00f,2025-12-30,financed,Existing Active,Active,0,0.0,86189,39800.0,26-35
+94d600c86268a3890e77,2025-12-30,financed,Existing Active,Active,0,0.0,48169,21420.0,26-35
+9a2bc770c332a9d87373,2025-12-30,financed,First Month Default without inventory over 30,FMD,858,64999.0,14600,64999.0,26-35
+9cd69f42b2748451c4d8,2025-12-30,financed,Write Off,PAR 30,332,5840.0,42299,5840.0,Unknown
+a11d413dc2bda2d1c86e,2025-12-30,financed,Existing Active,Active,0,0.0,32699,57350.0,26-35
+a606d10f3c461da2412a,2025-12-30,financed,First 2 days Return,Return,533,92679.0,12109,80570.0,Unknown
+a6d02e92451fce13962a,2025-12-30,financed,Paid Off Loan,Paid Off,0,8861.0,63098,0.0,Unknown
+a9256b384faeaac42f8a,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,74539,0.0,Unknown
+abcecc4d2739227641f4,2025-12-30,financed,Cancelled Returned past 3 mths,Return,318,67080.0,81199,67080.0,Unknown
+abede50502627cfabae8,2025-12-30,financed,New Active,Active,0,0.0,13939,67130.0,36-45
+ad9c19e2bb5f8cffa429,2025-12-30,financed,Existing Active,Active,0,0.0,10809,36520.0,36-45
+b1f52d5936145950b7b9,2025-12-30,financed,Paid Off Loan,Paid Off,0,100.0,66159,0.0,Unknown
+b800ddc5055749f4a48a,2025-12-30,financed,Write Off,PAR 30,324,37760.0,31199,37760.0,Unknown
+b98233a33e5f5b58b908,2025-12-30,financed,Write Off,PAR 30,376,11660.0,33899,11660.0,Unknown
+bb78b23131d39b630bbf,2025-12-30,financed,Existing Active,Active,0,0.0,17449,37820.0,36-45
+bd03c493420ad26c7e9e,2025-12-30,financed,First 2 days Return,Return,515,105199.0,13399,91800.0,Unknown
+bf4bb9d9e7c1d3e298ea,2025-12-30,financed,First 2 days Return,Return,171,38699.0,0,63999.0,Unknown
+bfffa088a182b2460081,2025-12-30,financed,First Payment Default,FPD,37,6960.0,8999,59160.0,18-25
+c2be0ae610eabbdc17af,2025-12-30,financed,First Month Default without inventory over 30,FMD,516,56455.0,11364,56455.0,Unknown
+c45f5ae52ccac7cf2060,2025-12-30,financed,Existing Active,Active,0,0.0,19969,7500.0,26-35
+c4d270d4e5f80b3db77a,2025-12-30,financed,Existing Active,Active,0,0.0,12379,46350.0,26-35
+c52f9544ea05b9673709,2025-12-30,cash,Paid Off Cash,Paid Off,0,0.0,74999,0.0,26-35
+c7650c1201e97ee10856,2025-12-30,financed,Paid Off Loan,Paid Off,0,100.0,50099,0.0,Unknown
+c8c993dfb36a35ec044f,2025-12-30,financed,Existing Active,Active,0,0.0,27249,22100.0,26-35
+cbad718abbd8d6475c6d,2025-12-30,financed,Existing Active,Active,0,0.0,87199,110930.0,36-45
+cc98d440935542769c32,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,71439,0.0,Unknown
+cd9f780d65e018d8ede9,2025-12-30,financed,Write Off,PAR 30,397,74860.0,25059,74860.0,Unknown
+cee187b12b55a10eaea5,2025-12-30,financed,Cancelled Returned past 3 mths,Return,735,46169.0,23710,46169.0,Unknown
+d449d53074dab5e559a9,2025-12-30,financed,Existing Active,Active,0,850.0,35449,13600.0,26-35
+d60e84bfcde33cf4911a,2025-12-30,financed,Existing Active,Active,0,0.0,15279,21170.0,Unknown
+d628f7ad7855294cf146,2025-12-30,financed,New Active,Active,0,0.0,29529,94500.0,36-45
+d87aa38b249c8e29b44d,2025-12-30,financed,Existing Active,Active,0,0.0,78119,21320.0,26-35
+dae688f7021b82be51e4,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,97539,0.0,Unknown
+e041afbbc9e0b84b660d,2025-12-30,financed,Existing Active,Active,0,0.0,39949,15400.0,26-35
+e0ba5e4ce308f301ef62,2025-12-30,financed,Write Off,PAR 30,511,35030.0,32229,35030.0,Unknown
+e684d3405cbd452ce1c8,2025-12-30,financed,Inactive 01-07,Inactive,1,150.0,21809,36420.0,36-45
+e9ad97a7c5b8ec9e7e17,2025-12-30,financed,Cancelled Returned past 3 mths,Return,74,10400.0,26899,28450.0,26-35
+ea06f0f70240300598f1,2025-12-30,financed,First Month Default with inventory,Return,535,87700.0,12739,87700.0,Unknown
+ea1bb43d85d25750d66a,2025-12-30,financed,Write Off,PAR 30,292,31500.0,42119,31500.0,Unknown
+edf0615498a0b8e3d8bc,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,68859,0.0,Unknown
+f15c64f773f9a11f0e21,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,109239,0.0,Unknown
+f17cee2a7d12c9b54a96,2025-12-30,financed,Paid Off Loan,Paid Off,0,100.0,82079,0.0,Unknown
+f3c3316ce801907cfe83,2025-12-30,financed,Existing Active,Active,0,0.0,38249,17100.0,26-35
+f48faed68f1d00b6cd05,2025-12-30,financed,Write Off,PAR 30,323,19900.0,57239,19900.0,Unknown
+f5bc47205009a3e8f1ba,2025-12-30,financed,Existing Active,Active,0,0.0,63899,7320.0,26-35
+f5e72bedca512250865b,2025-12-30,financed,Paid Off Loan,Paid Off,0,4620.0,27999,0.0,Unknown
+f72a5d3ef3e2a67f4da6,2025-12-30,financed,Write Off,PAR 30,419,44180.0,23639,44180.0,Unknown
+f826ecb51bf656267c7a,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,47899,0.0,Unknown
+f8361bf6cbba6f9ab72d,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,86979,0.0,Unknown
+f8c7656450b9ac21acac,2025-12-30,financed,Write Off,PAR 30,126,29830.0,25479,73790.0,18-25
+f8edc518994fbbf13be0,2025-12-30,financed,Write Off,PAR 30,135,26000.0,47599,31200.0,26-35
+faa0df3323469fdddbd7,2025-12-30,financed,Existing Active,Active,0,0.0,18459,19800.0,26-35
+fc71031e59f690079d06,2025-12-30,financed,Paid Off Loan,Paid Off,0,0.0,107959,0.0,26-35
+fcd8b8e886380696dcb1,2025-12-30,cash,Paid Off Cash,Paid Off,0,0.0,26999,0.0,Unknown
+ffd81b7de41f5445187f,2025-12-30,financed,Existing Active,Active,0,0.0,29679,31280.0,26-35
