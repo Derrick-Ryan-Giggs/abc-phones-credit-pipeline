@@ -79,3 +79,29 @@ def test_nps_by_keeps_values_that_are_not_in_the_expected_order():
     df = pd.DataFrame({"risk": ["Low"] * 5 + ["Critical"] * 5 + ["Not rated"] * 5, "nps_score": [9, 10, 8, 3, 9] * 3})
     out = an.nps_by(df, "risk", ["Low", "Medium", "High", "Critical"])
     assert list(out["risk"]) == ["Low", "Critical", "Not rated"] and out["risk"].notna().all()
+
+
+def test_payment_status_groups_cover_every_bucket_once():
+    assert [an.status_group(b) for b in ["0", "1-7", "8-30", "31-60", "61-90", "91+"]] == [
+        "Up to date", "1 to 30 days late", "1 to 30 days late", "31 to 90 days late", "31 to 90 days late", "Over 90 days late"]
+    assert an.status_group("unknown") is None
+
+
+def test_all_charts_render(tmp_path):
+    pytest.importorskip("matplotlib")
+    rng = np.random.default_rng(3)
+    metrics = pd.DataFrame({"snapshot_date": pd.to_datetime(["2025-01-01", "2025-03-31", "2025-06-30", "2025-09-30", "2025-12-30"]),
+                            "delinquency_rate_7plus": [.17, .19, .18, .18, .17], "par30_rate": [.11, .12, .11, .12, .11],
+                            "loss_rate_count": [.23, .26, .27, .27, .26], "collection_rate": [.94, .93, .93, .93, .94],
+                            "fpd_rate": [.07, .068, .061, .057, .058], "retention_rate": [np.nan, .93, .94, .95, .96]})
+    an.chart_portfolio_trends(metrics, tmp_path / "a.png")
+    perf = pd.DataFrame({"band": rng.choice(["A", "B", "C"], 600), "is_delinquent_7plus": rng.random(600) < 0.2})
+    seg = an.segment_table(perf, "band", ["A", "B", "C"])
+    an.chart_income_risk(seg, (-3.0, 0.001), pd.Timestamp("2025-01-01"), tmp_path / "b.png")
+    an.chart_age_risk(seg, pd.Timestamp("2025-01-01"), tmp_path / "c.png")
+    sample = pd.DataFrame({"dpd_bucket": rng.choice(["0", "1-7", "8-30", "31-60", "61-90", "91+"], 400), "nps_score": rng.integers(0, 11, 400).astype(float),
+                           "assistance_difficulty": rng.choice(["Yes", "No"], 400), "phone_lock_experienced": rng.choice(["Yes", "No"], 400),
+                           "payment_delay_experienced": rng.choice(["Yes", "No"], 400)})
+    an.chart_nps_by_status(sample, tmp_path / "d.png")
+    an.chart_nps_experience(sample, tmp_path / "e.png")
+    assert all((tmp_path / f"{n}.png").stat().st_size > 5000 for n in "abcde")
