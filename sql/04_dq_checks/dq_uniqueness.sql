@@ -1,5 +1,3 @@
--- Data quality check: uniqueness. Returns rows only when the check fails.
-
 -- sql/04_dq_checks/dq_uniqueness.sql
 -- CHECK 2: UNIQUENESS ("are there unexpected duplicate loans or records?")
 -- observed = number of keys that appear more than once.

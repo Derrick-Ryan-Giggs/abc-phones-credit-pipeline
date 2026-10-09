@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """quality_checks.py
 
@@ -13,6 +12,7 @@ Checks (each result has: check_name, severity, observed, threshold, passed, desc
     4 range and logic        ages 18-120, days past due not negative, NPS 0-10, known source defects reported
     5 null thresholds        keys never null; per-column limits set from the profiling run
     6 no unmasked PII        no raw IDs, emails or phone numbers in staging or marts (Python, see pii_checks)
+    7 schema contract        every staging table has exactly the columns and types agreed in sql/01_staging (Python, see schema_checks)
 
 Severity and alerting:
     critical  the run exits with code 2, an ALERT block is printed and logged at ERROR level; in production the
@@ -40,8 +40,11 @@ from pathlib import Path
 import pandas as pd
 import yaml
 
+from utils.logging_setup import setup_logging
+
 ROOT = Path(__file__).resolve().parents[1]
 SQL_DIR = ROOT / "sql" / "04_dq_checks"
+CONTRACT_DIR = ROOT / "sql" / "01_staging"
 LOG = logging.getLogger("quality_checks")
 RESULT_COLUMNS = ["check_name", "severity", "observed", "threshold", "passed", "description"]
 
@@ -99,6 +102,38 @@ def pii_checks(read_table, staging: list[str], marts: list[str]) -> pd.DataFrame
     return pd.DataFrame(rows, columns=RESULT_COLUMNS)
 
 
+def parse_contract(sql: str):
+    """Read a staging contract file. Returns (table name, {column: type}) or None if the file has no CREATE TABLE."""
+    m = re.search(r"CREATE TABLE IF NOT EXISTS\s+\{\{STG\}\}\.(\w+)\s*\((.*?)\n\)", sql, re.S)
+    if not m:
+        return None
+    cols = {}
+    for line in m.group(2).splitlines():
+        c = re.match(r"\s*(\w+)\s+(STRING|FLOAT64|INT64|BOOL|DATE|TIMESTAMP)\b", line)
+        if c:
+            cols[c.group(1)] = c.group(2)
+    return m.group(1), cols
+
+
+def schema_checks(run_query, stg: str, contract_dir: Path = CONTRACT_DIR) -> pd.DataFrame:
+    """Check 7: each staging table must have exactly the columns and types in its contract file (catches a malformed load)."""
+    rows = []
+    for f in sorted(contract_dir.glob("*.sql")):
+        parsed = parse_contract(f.read_text())
+        if parsed is None:
+            continue
+        table, expected = parsed
+        actual_df = run_query(f"SELECT column_name, data_type FROM {stg}.INFORMATION_SCHEMA.COLUMNS WHERE table_name = '{table}'")
+        actual = dict(zip(actual_df["column_name"], actual_df["data_type"]))
+        problems = ([f"missing {c}" for c in sorted(set(expected) - set(actual))]
+                    + [f"unexpected {c}" for c in sorted(set(actual) - set(expected))]
+                    + [f"{c} is {actual[c]}, expected {expected[c]}" for c in expected if c in actual and actual[c] != expected[c]])
+        detail = f": {'; '.join(problems[:5])}" if problems else ""
+        rows.append({"check_name": f"schema.{table}", "severity": "critical", "observed": float(len(problems)), "threshold": 0.0,
+                     "passed": not problems, "description": f"{table} matches its schema contract in sql/01_staging{detail}"})
+    return pd.DataFrame(rows, columns=RESULT_COLUMNS)
+
+
 def exit_code(results: pd.DataFrame, fail_on: str = "critical") -> int:
     """0 = fine, 2 = a critical check failed, 1 = only warnings failed and --fail-on warning was chosen."""
     failed = results[~results["passed"].astype(bool)]
@@ -141,8 +176,7 @@ def main() -> int:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     args.log_dir.mkdir(parents=True, exist_ok=True)
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
-                        handlers=[logging.FileHandler(args.log_dir / "quality_checks.log"), logging.StreamHandler(sys.stderr)])
+    setup_logging("quality_checks", args.log_dir)
     cfg = yaml.safe_load(args.config.read_text())
     project, location = cfg["gcp"]["project_id"], cfg["bigquery"]["location"]
     stg_id, marts_id = cfg["bigquery"]["dataset_staging"], cfg["bigquery"]["dataset_marts"]
@@ -175,7 +209,8 @@ def main() -> int:
         except NotFound:
             return None
 
-    results = pd.concat([run_sql_checks(run_query, stg, dates), pii_checks(read_table, PII_STAGING_TABLES, PII_MART_TABLES)], ignore_index=True)
+    results = pd.concat([run_sql_checks(run_query, stg, dates), schema_checks(run_query, stg),
+                         pii_checks(read_table, PII_STAGING_TABLES, PII_MART_TABLES)], ignore_index=True)
     results["passed"] = results["passed"].astype(bool)
     results.insert(0, "run_ts", run_ts)
     results.insert(0, "run_id", run_id)

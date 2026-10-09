@@ -25,6 +25,9 @@ from pathlib import Path
 
 import yaml
 
+from utils.logging_setup import setup_logging
+from utils.bq_client import render_sql as render
+
 ROOT = Path(__file__).resolve().parents[1]
 SQL_DIR = ROOT / "sql" / "02_features"
 LOG = logging.getLogger("feature_engineering")
@@ -45,12 +48,6 @@ ORDER BY 1, 2, 3
 """
 
 
-def render(sql: str, cfg: dict) -> str:
-    """Fill in the dataset and partition placeholders."""
-    stg = f"`{cfg['gcp']['project_id']}.{cfg['bigquery']['dataset_staging']}`"
-    return sql.replace("{{STG}}", stg).replace("{{PARTITION}}", "PARTITION BY snapshot_date CLUSTER BY loan_key")
-
-
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", action="store_true", help="validate the SQL and estimate cost without creating anything")
@@ -61,11 +58,7 @@ def main() -> int:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     args.log_dir.mkdir(parents=True, exist_ok=True)
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s %(levelname)s %(message)s",
-        handlers=[logging.FileHandler(args.log_dir / "feature_engineering.log"), logging.StreamHandler(sys.stderr)],
-    )
+    setup_logging("feature_engineering", args.log_dir)
     cfg = yaml.safe_load(args.config.read_text())
 
     files = sorted(SQL_DIR.glob("*.sql"))

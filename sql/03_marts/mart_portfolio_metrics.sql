@@ -1,5 +1,3 @@
--- Portfolio health metrics per snapshot.
-
 -- sql/03_marts/mart_portfolio_metrics.sql
 --
 -- Question 3A. One row per snapshot, financed loans only.

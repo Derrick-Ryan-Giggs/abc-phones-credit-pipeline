@@ -26,21 +26,15 @@ from pathlib import Path
 
 import yaml
 
+from utils.logging_setup import setup_logging
+from utils.bq_client import render_sql as render
+
 ROOT = Path(__file__).resolve().parents[1]
 SQL_DIR = ROOT / "sql" / "03_marts"
 LOG = logging.getLogger("build_marts")
 
 SHOW_COLUMNS = ["snapshot_date", "financed_loans", "delinquency_rate_7plus", "par30_rate",
                 "loss_rate_count", "collection_rate", "fpd_rate", "retention_rate"]
-
-
-def render(sql: str, cfg: dict) -> str:
-    """Fill in the dataset and partition placeholders."""
-    project = cfg["gcp"]["project_id"]
-    stg = f"`{project}.{cfg['bigquery']['dataset_staging']}`"
-    marts = f"`{project}.{cfg['bigquery']['dataset_marts']}`"
-    return (sql.replace("{{STG}}", stg).replace("{{MARTS}}", marts)
-               .replace("{{PARTITION}}", "PARTITION BY snapshot_date CLUSTER BY loan_key"))
 
 
 def main() -> int:
@@ -53,11 +47,7 @@ def main() -> int:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     args.log_dir.mkdir(parents=True, exist_ok=True)
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s %(levelname)s %(message)s",
-        handlers=[logging.FileHandler(args.log_dir / "build_marts.log"), logging.StreamHandler(sys.stderr)],
-    )
+    setup_logging("build_marts", args.log_dir)
     cfg = yaml.safe_load(args.config.read_text())
 
     files = sorted(SQL_DIR.glob("*.sql"))

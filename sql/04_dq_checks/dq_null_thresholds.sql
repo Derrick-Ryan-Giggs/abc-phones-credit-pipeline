@@ -1,5 +1,3 @@
--- Data quality check: null_thresholds. Returns rows only when the check fails.
-
 -- sql/04_dq_checks/dq_null_thresholds.sql
 -- CHECK 5: NULL THRESHOLDS ("what share of missing values is acceptable per column?")
 -- Keys may never be null. Other thresholds sit a little above what the profiling run observed,

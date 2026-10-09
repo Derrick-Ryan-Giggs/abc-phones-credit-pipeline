@@ -1,5 +1,3 @@
--- Risk behaviour by age band and income band.
-
 -- sql/03_marts/mart_segment_risk.sql
 --
 -- Question 3A, segment view. One row per snapshot x segment type x segment, financed loans only.

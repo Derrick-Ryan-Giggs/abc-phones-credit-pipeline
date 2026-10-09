@@ -1,5 +1,3 @@
--- age_band as at each snapshot, income band, days_past_due, risk_category.
-
 -- sql/02_features/loan_snapshot_features.sql
 --
 -- Feature layer: one row per loan per snapshot (grain of stg_credit_snapshots).

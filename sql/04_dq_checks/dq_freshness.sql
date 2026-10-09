@@ -1,5 +1,3 @@
--- Data quality check: freshness. Returns rows only when the check fails.
-
 -- sql/04_dq_checks/dq_freshness.sql
 -- CHECK 1: FRESHNESS AND COMPLETENESS OF SNAPSHOTS ("is the data arriving on schedule?")
 --

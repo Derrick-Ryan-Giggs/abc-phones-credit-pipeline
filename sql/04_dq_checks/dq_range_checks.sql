@@ -1,5 +1,3 @@
--- Data quality check: range_checks. Returns rows only when the check fails.
-
 -- sql/04_dq_checks/dq_range_checks.sql
 -- CHECK 4: RANGE AND LOGIC CHECKS ("are values plausible?")
 -- Known source defects are severity 'warning': they are flagged in staging (dq_* columns), never overwritten,

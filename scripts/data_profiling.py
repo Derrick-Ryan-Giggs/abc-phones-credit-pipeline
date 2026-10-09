@@ -34,6 +34,9 @@ import numpy as np
 import pandas as pd
 from openpyxl import load_workbook
 
+from utils.logging_setup import setup_logging
+from utils.masking import EMAIL_RE, PHONE_RE
+
 ROOT = Path(__file__).resolve().parents[1]
 LOG = logging.getLogger("data_profiling")
 
@@ -44,8 +47,6 @@ SENSITIVE_COL = re.compile(
 )
 FREE_TEXT_COL = re.compile(r"reason|one thing|describe|feedback|anything|comment", re.I)
 DATE_LIKE = r"^\d{4}-\d{2}-\d{2}|^\d{1,2}/\d{1,2}/\d{2,4}"
-PHONE_RE = re.compile(r"(?:\+?254|\b0)[\s-]?[17]\d{2}[\s-]?\d{3}[\s-]?\d{3}")
-EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 INCOME_BINS = [0, 5_000, 10_000, 20_000, 30_000, 50_000, 100_000, 150_000, np.inf]
 INCOME_LABELS = ["<5k", "5k-9.9k", "10k-19.9k", "20k-29.9k", "30k-49.9k", "50k-99.9k", "100k-149.9k", "150k+"]
 AGE_BINS = [-1, 18, 26, 36, 46, 56, 121, 1000]
@@ -548,11 +549,7 @@ def main() -> int:
 
     for d in (args.out_dir, args.log_dir, args.interim_dir):
         d.mkdir(parents=True, exist_ok=True)
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s %(levelname)s %(message)s",
-        handlers=[logging.FileHandler(args.log_dir / "data_profiling.log"), logging.StreamHandler(sys.stderr)],
-    )
+    setup_logging("data_profiling", args.log_dir)
 
     credit_files, sales_path, nps_path, defs_path = find_files(args.raw_dir)
     missing = [n for n, v in (("credit CSVs", credit_files), ("sales workbook", sales_path), ("NPS workbook", nps_path)) if not v]

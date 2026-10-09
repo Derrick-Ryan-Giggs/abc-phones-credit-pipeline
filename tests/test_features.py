@@ -1,5 +1,3 @@
-"""Unit tests for age_band, income band, days_past_due and risk_category."""
-
 """Unit tests for the feature SQL (sql/02_features/loan_snapshot_features.sql).
 
 The SQL is run in an in-memory DuckDB against tiny hand-built staging tables, so no cloud access is needed.

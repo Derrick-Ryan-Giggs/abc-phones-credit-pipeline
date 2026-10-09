@@ -1,5 +1,3 @@
--- Analytics-ready fact table: loan x snapshot with all features.
-
 -- sql/03_marts/fct_loan_snapshot.sql
 --
 -- Analytics-ready fact table. Grain: one row per loan per snapshot (financed AND other scopes; filter on is_financed).

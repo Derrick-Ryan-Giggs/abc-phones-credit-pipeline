@@ -1,5 +1,3 @@
--- Data quality check: referential_integrity. Returns rows only when the check fails.
-
 -- sql/04_dq_checks/dq_referential_integrity.sql
 -- CHECK 3: REFERENTIAL INTEGRITY ("do all keys exist where they should?")
 

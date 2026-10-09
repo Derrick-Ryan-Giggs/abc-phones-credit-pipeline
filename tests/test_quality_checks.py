@@ -1,4 +1,3 @@
-
 """Unit tests for the data quality framework. The SQL checks run in an in-memory DuckDB on tiny tables, so no cloud
 access is needed. Each test seeds one defect and asserts that exactly the right check fails.
 
@@ -157,3 +156,46 @@ def test_pii_check_flags_leaks_and_passes_clean_tables():
     res = qc.pii_checks(lambda name: tables.get(name), ["stg_a", "stg_b", "stg_c", "stg_missing"], []).set_index("check_name")
     assert bool(res.loc["pii.stg_a", "passed"]) and not bool(res.loc["pii.stg_b", "passed"]) and not bool(res.loc["pii.stg_c", "passed"])
     assert "pii.stg_missing" not in res.index  # tables that do not exist yet are skipped
+
+
+CONTRACT = """-- header
+CREATE TABLE IF NOT EXISTS {{STG}}.stg_demo (
+  loan_key STRING,
+  snapshot_date DATE,
+  amount   FLOAT64
+)
+PARTITION BY snapshot_date;
+"""
+
+
+def test_contract_file_is_parsed():
+    assert qc.parse_contract(CONTRACT) == ("stg_demo", {"loan_key": "STRING", "snapshot_date": "DATE", "amount": "FLOAT64"})
+    assert qc.parse_contract("-- just a comment") is None
+
+
+def test_schema_check_passes_on_a_matching_table_and_names_every_problem(tmp_path):
+    (tmp_path / "stg_demo.sql").write_text(CONTRACT)
+    good = pd.DataFrame({"column_name": ["loan_key", "snapshot_date", "amount"], "data_type": ["STRING", "DATE", "FLOAT64"]})
+    assert bool(qc.schema_checks(lambda q: good, "`p.d`", tmp_path)["passed"].iloc[0])
+    bad = pd.DataFrame({"column_name": ["loan_key", "amount", "extra_col"], "data_type": ["STRING", "STRING", "INT64"]})
+    res = qc.schema_checks(lambda q: bad, "`p.d`", tmp_path).iloc[0]
+    assert res["check_name"] == "schema.stg_demo" and res["severity"] == "critical" and not bool(res["passed"])
+    assert res["observed"] == 3
+    assert "missing snapshot_date" in res["description"] and "unexpected extra_col" in res["description"] and "amount is STRING" in res["description"]
+    missing_table = pd.DataFrame({"column_name": [], "data_type": []})
+    assert qc.schema_checks(lambda q: missing_table, "`p.d`", tmp_path)["observed"].iloc[0] == 3
+
+
+def test_schema_query_targets_the_information_schema_of_the_staging_dataset(tmp_path):
+    (tmp_path / "stg_demo.sql").write_text(CONTRACT)
+    seen = []
+    qc.schema_checks(lambda q: seen.append(q) or pd.DataFrame({"column_name": [], "data_type": []}), "`p.d`", tmp_path)
+    assert seen == ["SELECT column_name, data_type FROM `p.d`.INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'stg_demo'"]
+
+
+def test_the_real_contract_files_in_the_repo_are_readable():
+    files = sorted(qc.CONTRACT_DIR.glob("stg_*.sql"))
+    assert len(files) == 5
+    for f in files:
+        table, cols = qc.parse_contract(f.read_text())
+        assert table == f.stem and len(cols) >= 5 and any(c.endswith("_key") and t == "STRING" for c, t in cols.items())

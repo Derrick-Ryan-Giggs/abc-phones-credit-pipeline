@@ -1,6 +1,3 @@
--- NPS joined to the nearest credit snapshot.
-
-
 -- sql/03_marts/mart_nps_credit.sql
 --
 -- Question 3B. One row per NPS response with the loan's credit state AT the matched snapshot (the latest snapshot

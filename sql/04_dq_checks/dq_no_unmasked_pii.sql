@@ -1,1 +1,6 @@
--- Data quality check: no_unmasked_pii. Returns rows only when the check fails.
+-- sql/04_dq_checks/dq_no_unmasked_pii.sql
+--
+-- Check 6, no unmasked personal data, is written in Python, not SQL: see pii_checks() in scripts/quality_checks.py.
+-- Pattern matching for emails, phone numbers and raw IDs behaves differently in each SQL dialect, and the same
+-- code is shared with data_cleaning.py (scripts/utils/masking.py: pii_guard), so one tested version is used.
+-- This file stays so that the six checks map to six files. The runner skips files that contain only comments.

@@ -37,6 +37,8 @@ import numpy as np
 import pandas as pd
 import yaml
 
+from utils.logging_setup import setup_logging
+
 ROOT = Path(__file__).resolve().parents[1]
 LOG = logging.getLogger("analysis")
 
@@ -471,8 +473,7 @@ def main() -> int:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     args.log_dir.mkdir(parents=True, exist_ok=True)
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
-                        handlers=[logging.FileHandler(args.log_dir / "analysis.log"), logging.StreamHandler(sys.stderr)])
+    setup_logging("analysis", args.log_dir)
     cfg = yaml.safe_load(args.config.read_text())
     project, location = cfg["gcp"]["project_id"], cfg["bigquery"]["location"]
     marts = f"`{project}.{cfg['bigquery']['dataset_marts']}`"

@@ -30,7 +30,6 @@ from __future__ import annotations
 
 import argparse
 import hashlib
-import hmac
 import logging
 import re
 import sys
@@ -40,13 +39,10 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import yaml
 
 # Shared helpers live in the profiling script (scripts/ is on sys.path when run as a script).
 from data_profiling import (
-    EMAIL_RE,
     NULL_TOKENS,
-    PHONE_RE,
     age_years,
     clean_key,
     find_col,
@@ -57,6 +53,9 @@ from data_profiling import (
     sheet_by_kw,
     to_date,
 )
+from utils.config import load_config
+from utils.logging_setup import setup_logging
+from utils.masking import EMAIL_RE, PHONE_RE, Masker, get_masking_key, redact_text
 
 ROOT = Path(__file__).resolve().parents[1]
 LOG = logging.getLogger("data_cleaning")
@@ -90,31 +89,6 @@ class StepLog:
         return pd.DataFrame(self.rows)
 
 
-class Masker:
-    """Keyed hash of identifiers. Blank values stay null. Only unique values are hashed."""
-
-    def __init__(self, key: bytes) -> None:
-        self._key = key
-
-    def __call__(self, s: pd.Series) -> pd.Series:
-        cache = {
-            v: hmac.new(self._key, v.encode("utf-8"), hashlib.sha256).hexdigest()[:20]
-            for v in s.dropna().astype(str).unique()
-            if v.strip() != ""
-        }
-        return s.astype(object).map(cache)
-
-
-def get_masking_key(cfg: dict) -> bytes:
-    """Read the masking key from Secret Manager (pinned version). Never from a file or .env."""
-    from google.cloud import secretmanager
-
-    g = cfg["gcp"]
-    name = f"projects/{g['project_id']}/secrets/{g['masking_secret']}/versions/{g['masking_secret_version']}"
-    client = secretmanager.SecretManagerServiceClient()
-    return client.access_secret_version(request={"name": name}).payload.data
-
-
 def text(s: pd.Series) -> pd.Series:
     """Trimmed text with blank and null-like tokens (N/A, null, -) turned into nulls."""
     st = s.astype(str).str.strip()
@@ -122,12 +96,8 @@ def text(s: pd.Series) -> pd.Series:
 
 
 def redact(s: pd.Series) -> pd.Series:
-    """Remove emails, phone numbers and long digit runs from free text."""
-    out = text(s)
-    out = out.str.replace(EMAIL_RE.pattern, "[email]", regex=True)
-    out = out.str.replace(PHONE_RE.pattern, "[phone]", regex=True)
-    out = out.str.replace(r"\b\d{7,}\b", "[number]", regex=True)
-    return out.astype(object)
+    """Null-like tokens become nulls, then emails, phone numbers and long digit runs are removed."""
+    return redact_text(text(s))
 
 
 # ----------------------------------------------------------------------------
@@ -455,12 +425,8 @@ def main() -> int:
 
     for d in (args.staging_dir, args.out_dir, args.log_dir, args.interim_dir):
         d.mkdir(parents=True, exist_ok=True)
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s %(levelname)s %(message)s",
-        handlers=[logging.FileHandler(args.log_dir / "data_cleaning.log"), logging.StreamHandler(sys.stderr)],
-    )
-    cfg = yaml.safe_load(args.config.read_text())
+    setup_logging("data_cleaning", args.log_dir)
+    cfg = load_config(args.config)
     run_id, run_ts = uuid.uuid4().hex[:8], datetime.now(timezone.utc)
     LOG.info("Run %s started", run_id)
 
