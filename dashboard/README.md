@@ -141,3 +141,29 @@ Full definitions and the reasoning behind them: `docs/assumptions.md` and `docs/
 1. Run `uv run python scripts/run_pipeline.py` (builds staging, runs the 48 quality checks, builds the marts).
 2. Open the report and click Refresh data.
 3. If a mart column is renamed, edit the data source (Resource, then Manage added data sources) and refresh its fields.
+
+
+## Definition of terms
+
+**Snapshot.** The state of every loan on one date. There are five in 2025: 1 Jan, 31 Mar, 30 Jun, 30 Sep, 30 Dec.
+
+**Days past due.** Days since a payment was due and not received.
+
+**Financed loan.** A sale where the customer took installment credit (credit check result "Y LOAN").
+
+**Live loan.** A financed loan that is not Paid Off or Returned.
+
+**Lost loan.** A live loan that is written off or 91 or more days past due.
+
+**Performing loan.** A live loan that is not lost. Delinquency, seriously late and collection use performing loans.
+
+| Dashboard label | Field | Definition |
+|---|---|---|
+| Behind on payments | `delinquency_rate_7plus` | Performing loans 8 to 90 days past due, divided by all performing loans. Lower is better. |
+| Seriously late, 31-90 days | `par30_rate` | Performing loans 31 to 90 days past due, divided by all performing loans. A subset of the line above. Lower is better. |
+| Money collected | `collection_rate` | Total paid divided by total due to date, on performing loans. Higher is better. |
+| Loans lost | `loss_rate_count` | Lost loans divided by all financed loans. Lower is better. (Page 2 divides by live loans instead.) |
+| Customers retained | `retention_rate` | Of loans that were Active, Inactive or PAR 7 at the previous snapshot, the share that are neither returned nor lost now. Starts in March. Higher is better. |
+| First payment missed | `fpd_rate` | First payment default: financed loans that missed their first payment, divided by all financed loans. Lower is better. |
+| NPS | `nps_score` | Share of customers scoring 9 or 10 minus the share scoring 0 to 6, times 100. Range -100 to +100. |
+| Average score | `nps_score` | Mean of the 0 to 10 survey answers. |
