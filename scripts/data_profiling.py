@@ -535,6 +535,19 @@ def join_analysis(rep: Report, cred: pd.DataFrame, dims: dict[str, pd.Series], r
         rep.add("Row counts for comparison: " + "; ".join(f"{k}={v:,}" for k, v in rows.items()))
 
 
+def committed_summary(text: str) -> str:
+    """Keep only the sections that are safe and useful to commit: row counts, column profiles, join keys.
+
+    The full report stays in outputs/profiling/ (gitignored). Column details already hide identifiers,
+    dates of birth and free text, so these three sections hold only counts, types and shares.
+    """
+    keep = ("1. ", "2. ", "10. ")
+    parts = re.split(r"(?m)^(?=## )", text)
+    head = "# Data profiling summary\n\nRow counts, column types, null shares and join-key integrity. Full report: run `scripts/data_profiling.py`.\n"
+    body = [p for p in parts if p.startswith("## ") and p[3:].startswith(keep)]
+    return head + "\n" + "".join(body)
+
+
 # ----------------------------------------------------------------------------
 # Main
 # ----------------------------------------------------------------------------
@@ -611,6 +624,9 @@ def main() -> int:
     out = args.out_dir / "profiling_report.md"
     out.write_text(rep.text(), encoding="utf-8")
     LOG.info("Report written to %s", out)
+    summary = ROOT / "outputs" / "profiling_summary.md"
+    summary.write_text(committed_summary(rep.text()), encoding="utf-8")
+    LOG.info("Committed summary written to %s", summary)
     print(rep.text())
     return 0
 

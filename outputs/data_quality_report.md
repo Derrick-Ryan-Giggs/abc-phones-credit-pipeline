@@ -1,7 +1,7 @@
 # Data quality report
 
 Project: ABC Phones credit portfolio pipeline (Annex Technologies Data Engineer case study)
-Evidence: `outputs/profiling/profiling_report.md` (profiling run), `outputs/cleaning_log.csv` (row counts per cleaning step), `outputs/dq_results.csv` (latest quality run), `outputs/analysis_findings.md`.
+Evidence: `outputs/profiling_summary.md` (profiling run), `outputs/cleaning_log.csv` (row counts per cleaning step), `outputs/dq_results.csv` (latest quality run), `outputs/analysis_findings.md`.
 
 ## 1. What was profiled
 

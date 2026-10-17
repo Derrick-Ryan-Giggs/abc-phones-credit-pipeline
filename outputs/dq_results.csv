@@ -1,49 +1,49 @@
 run_id,run_ts,check_name,severity,observed,threshold,passed,description
-5420ab8d,2026-10-09 19:19:03.736855+00:00,freshness.expected_snapshots_missing,critical,0.0,0.0,True,Expected snapshot dates that have no rows in stg_credit_snapshots
-5420ab8d,2026-10-09 19:19:03.736855+00:00,freshness.unexpected_snapshots,warning,0.0,0.0,True,Snapshot dates loaded that are not in the expected list
-5420ab8d,2026-10-09 19:19:03.736855+00:00,freshness.latest_snapshot_is_the_expected_latest,critical,0.0,0.0,True,The newest loaded snapshot date equals the newest expected date
-5420ab8d,2026-10-09 19:19:03.736855+00:00,freshness.snapshot_row_count_dropped,warning,0.0,0.0,True,"Snapshots with fewer rows than the previous one (loans never leave the extracts, so the book should only grow)"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.credit.loan_key,critical,0.0,0.0,True,Null share of stg_credit_snapshots.loan_key (keys must never be null)
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.credit.snapshot_date,critical,0.0,0.0,True,Null share of stg_credit_snapshots.snapshot_date (the DATE column must parse)
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.credit.account_status_l2,critical,0.0,0.01,True,Null share of account_status_l2 (limit 1%)
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.credit.days_past_due,warning,0.0,0.005,True,Null share of days_past_due (limit 0.5%)
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.credit.arrears,warning,0.0,0.005,True,Null share of arrears (limit 0.5%)
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.credit.total_due_today,warning,0.00039184952978056425,0.005,True,Null share of total_due_today (limit 0.5%)
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.credit.max_payment_date,warning,0.010481974921630093,0.03,True,"Null share of max_payment_date (limit 3%, about 1% today)"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.sales.loan_key,critical,0.0,0.0,True,Null share of stg_sales.loan_key
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.sales.sale_type,warning,9.639947944281101e-05,0.01,True,Null share of sale_type (limit 1%)
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.sales.loan_term_months,warning,0.03687280088687521,0.06,True,Null share of loan_term_months (limit 6%; non-numeric terms such as STDHIGH are about 3.7% today)
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.nps.loan_key,critical,0.0,0.0,True,Null share of stg_nps.loan_key
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.nps.nps_score,warning,0.03487527246306612,0.05,True,"Null share of nps_score (limit 5%, about 3.5% today)"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,nulls.income.avg_monthly_income,warning,0.0,0.05,True,Null share of avg_monthly_income (needs a Duration above zero)
-5420ab8d,2026-10-09 19:19:03.736855+00:00,range.age_outside_18_120,critical,0.0,0.0,True,Derived ages outside 18-120
-5420ab8d,2026-10-09 19:19:03.736855+00:00,range.negative_days_past_due,critical,0.0,0.0,True,Negative days_past_due
-5420ab8d,2026-10-09 19:19:03.736855+00:00,range.nps_score_outside_0_10,critical,0.0,0.0,True,NPS scores outside the 0-10 scale
-5420ab8d,2026-10-09 19:19:03.736855+00:00,range.payment_date_after_snapshot_share,warning,0.3145012315270936,0.0,False,"Share of rows where MAX_PAYMENT_DATE is later than the snapshot date. The extract stamps this field at extract time, so older snapshots contain future information. Flagged, and excluded from features and ML"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,range.negative_amount_share,warning,0.0014834303627407075,0.005,True,"Share of rows with a negative balance, closing balance, total paid, deposit or initial payment"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,range.return_before_sale_share,warning,4.8199739721405505e-05,0.001,True,Share of sales whose return date is before the sale date
-5420ab8d,2026-10-09 19:19:03.736855+00:00,range.negative_monthly_income,warning,0.0,0.0,True,Loans with a negative average monthly income
-5420ab8d,2026-10-09 19:19:03.736855+00:00,integrity.credit_loans_missing_from_sales,critical,0.0,0.0,True,Loans in the credit snapshots with no row in stg_sales
-5420ab8d,2026-10-09 19:19:03.736855+00:00,integrity.nps_loans_missing_from_credit,critical,0.0,0.0,True,NPS responses whose loan is not in the credit snapshots
-5420ab8d,2026-10-09 19:19:03.736855+00:00,integrity.loan_age_rows_without_credit_row,critical,0.0,0.0,True,stg_loan_age rows with no matching credit snapshot row
-5420ab8d,2026-10-09 19:19:03.736855+00:00,integrity.income_loans_missing_from_credit,warning,0.0,0.0,True,Income rows whose loan is not in the credit snapshots
-5420ab8d,2026-10-09 19:19:03.736855+00:00,integrity.share_of_sales_without_credit,warning,0.00024099869860702753,0.001,True,Share of sales with no credit record (a few are expected: sales not yet in any snapshot)
-5420ab8d,2026-10-09 19:19:03.736855+00:00,integrity.share_of_latest_loans_without_age,warning,0.4612380676887475,0.6,True,Share of latest-snapshot loans with no age band. Demographic coverage is about 54% today; alert if it falls below 40%
-5420ab8d,2026-10-09 19:19:03.736855+00:00,integrity.share_of_latest_loans_without_income,warning,0.4885256966541317,0.6,True,Share of latest-snapshot loans with no income row. Coverage is about 51% today; alert if it falls below 40%
-5420ab8d,2026-10-09 19:19:03.736855+00:00,uniqueness.credit_loan_snapshot,critical,0.0,0.0,True,"Duplicate (loan_key, snapshot_date) in stg_credit_snapshots"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,uniqueness.sales_loan,critical,0.0,0.0,True,Duplicate loan_key in stg_sales
-5420ab8d,2026-10-09 19:19:03.736855+00:00,uniqueness.income_loan,critical,0.0,0.0,True,Duplicate loan_key in stg_income (must be one row per loan after deduplication)
-5420ab8d,2026-10-09 19:19:03.736855+00:00,uniqueness.loan_age_loan_snapshot,critical,0.0,0.0,True,"Duplicate (loan_key, snapshot_date) in stg_loan_age"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,uniqueness.nps_response,critical,0.0,0.0,True,"Duplicate response_key in stg_nps (a loan may answer several times, a submission id may not repeat)"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,schema.stg_credit_snapshots,critical,0.0,0.0,True,stg_credit_snapshots matches its schema contract in sql/01_staging
-5420ab8d,2026-10-09 19:19:03.736855+00:00,schema.stg_income,critical,0.0,0.0,True,stg_income matches its schema contract in sql/01_staging
-5420ab8d,2026-10-09 19:19:03.736855+00:00,schema.stg_loan_age,critical,0.0,0.0,True,stg_loan_age matches its schema contract in sql/01_staging
-5420ab8d,2026-10-09 19:19:03.736855+00:00,schema.stg_nps,critical,0.0,0.0,True,stg_nps matches its schema contract in sql/01_staging
-5420ab8d,2026-10-09 19:19:03.736855+00:00,schema.stg_sales,critical,0.0,0.0,True,stg_sales matches its schema contract in sql/01_staging
-5420ab8d,2026-10-09 19:19:03.736855+00:00,pii.stg_credit_snapshots,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in stg_credit_snapshots"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,pii.stg_sales,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in stg_sales"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,pii.stg_loan_age,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in stg_loan_age"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,pii.stg_income,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in stg_income"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,pii.stg_nps,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in stg_nps"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,pii.fct_loan_snapshot,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in fct_loan_snapshot"
-5420ab8d,2026-10-09 19:19:03.736855+00:00,pii.mart_nps_credit,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in mart_nps_credit"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,freshness.expected_snapshots_missing,critical,0.0,0.0,True,Expected snapshot dates that have no rows in stg_credit_snapshots
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,freshness.unexpected_snapshots,warning,0.0,0.0,True,Snapshot dates loaded that are not in the expected list
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,freshness.latest_snapshot_is_the_expected_latest,critical,0.0,0.0,True,The newest loaded snapshot date equals the newest expected date
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,freshness.snapshot_row_count_dropped,warning,0.0,0.0,True,"Snapshots with fewer rows than the previous one (loans never leave the extracts, so the book should only grow)"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.credit.loan_key,critical,0.0,0.0,True,Null share of stg_credit_snapshots.loan_key (keys must never be null)
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.credit.snapshot_date,critical,0.0,0.0,True,Null share of stg_credit_snapshots.snapshot_date (the DATE column must parse)
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.credit.account_status_l2,critical,0.0,0.01,True,Null share of account_status_l2 (limit 1%)
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.credit.days_past_due,warning,0.0,0.005,True,Null share of days_past_due (limit 0.5%)
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.credit.arrears,warning,0.0,0.005,True,Null share of arrears (limit 0.5%)
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.credit.total_due_today,warning,0.00039184952978056425,0.005,True,Null share of total_due_today (limit 0.5%)
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.credit.max_payment_date,warning,0.010481974921630093,0.03,True,"Null share of max_payment_date (limit 3%, about 1% today)"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.sales.loan_key,critical,0.0,0.0,True,Null share of stg_sales.loan_key
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.sales.sale_type,warning,9.639947944281101e-05,0.01,True,Null share of sale_type (limit 1%)
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.sales.loan_term_months,warning,0.03687280088687521,0.06,True,Null share of loan_term_months (limit 6%; non-numeric terms such as STDHIGH are about 3.7% today)
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.nps.loan_key,critical,0.0,0.0,True,Null share of stg_nps.loan_key
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.nps.nps_score,warning,0.03487527246306612,0.05,True,"Null share of nps_score (limit 5%, about 3.5% today)"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,nulls.income.avg_monthly_income,warning,0.0,0.05,True,Null share of avg_monthly_income (needs a Duration above zero)
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,range.age_outside_18_120,critical,0.0,0.0,True,Derived ages outside 18-120
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,range.negative_days_past_due,critical,0.0,0.0,True,Negative days_past_due
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,range.nps_score_outside_0_10,critical,0.0,0.0,True,NPS scores outside the 0-10 scale
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,range.payment_date_after_snapshot_share,warning,0.3145012315270936,0.0,False,"Share of rows where MAX_PAYMENT_DATE is later than the snapshot date. The extract stamps this field at extract time, so older snapshots contain future information. Flagged, and excluded from features and ML"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,range.negative_amount_share,warning,0.0014834303627407075,0.005,True,"Share of rows with a negative balance, closing balance, total paid, deposit or initial payment"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,range.return_before_sale_share,warning,4.8199739721405505e-05,0.001,True,Share of sales whose return date is before the sale date
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,range.negative_monthly_income,warning,0.0,0.0,True,Loans with a negative average monthly income
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,integrity.credit_loans_missing_from_sales,critical,0.0,0.0,True,Loans in the credit snapshots with no row in stg_sales
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,integrity.nps_loans_missing_from_credit,critical,0.0,0.0,True,NPS responses whose loan is not in the credit snapshots
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,integrity.loan_age_rows_without_credit_row,critical,0.0,0.0,True,stg_loan_age rows with no matching credit snapshot row
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,integrity.income_loans_missing_from_credit,warning,0.0,0.0,True,Income rows whose loan is not in the credit snapshots
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,integrity.share_of_sales_without_credit,warning,0.00024099869860702753,0.001,True,Share of sales with no credit record (a few are expected: sales not yet in any snapshot)
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,integrity.share_of_latest_loans_without_age,warning,0.4612380676887475,0.6,True,Share of latest-snapshot loans with no age band. Demographic coverage is about 54% today; alert if it falls below 40%
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,integrity.share_of_latest_loans_without_income,warning,0.4885256966541317,0.6,True,Share of latest-snapshot loans with no income row. Coverage is about 51% today; alert if it falls below 40%
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,uniqueness.credit_loan_snapshot,critical,0.0,0.0,True,"Duplicate (loan_key, snapshot_date) in stg_credit_snapshots"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,uniqueness.sales_loan,critical,0.0,0.0,True,Duplicate loan_key in stg_sales
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,uniqueness.income_loan,critical,0.0,0.0,True,Duplicate loan_key in stg_income (must be one row per loan after deduplication)
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,uniqueness.loan_age_loan_snapshot,critical,0.0,0.0,True,"Duplicate (loan_key, snapshot_date) in stg_loan_age"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,uniqueness.nps_response,critical,0.0,0.0,True,"Duplicate response_key in stg_nps (a loan may answer several times, a submission id may not repeat)"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,schema.stg_credit_snapshots,critical,0.0,0.0,True,stg_credit_snapshots matches its schema contract in sql/01_staging
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,schema.stg_income,critical,0.0,0.0,True,stg_income matches its schema contract in sql/01_staging
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,schema.stg_loan_age,critical,0.0,0.0,True,stg_loan_age matches its schema contract in sql/01_staging
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,schema.stg_nps,critical,0.0,0.0,True,stg_nps matches its schema contract in sql/01_staging
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,schema.stg_sales,critical,0.0,0.0,True,stg_sales matches its schema contract in sql/01_staging
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,pii.stg_credit_snapshots,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in stg_credit_snapshots"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,pii.stg_sales,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in stg_sales"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,pii.stg_loan_age,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in stg_loan_age"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,pii.stg_income,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in stg_income"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,pii.stg_nps,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in stg_nps"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,pii.fct_loan_snapshot,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in fct_loan_snapshot"
+5b0c1a09,2026-10-17 13:14:26.265855+00:00,pii.mart_nps_credit,critical,0.0,0.0,True,"Raw IDs, emails, phone numbers or unmasked keys found in mart_nps_credit"

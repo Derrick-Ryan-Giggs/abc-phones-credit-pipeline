@@ -1,6 +1,6 @@
 # Pipeline architecture
 
-How the ABC Phones credit data moves from source files to the dashboard, what happens when something goes wrong, and who is told. The picture below is the source for `architecture.png`.
+How the ABC Phones credit data moves from source files to the dashboard, what happens when something goes wrong, and who is told. The picture below “mirrors architecture.png, which is built from architecture.dot”.
 
 ```mermaid
 flowchart LR

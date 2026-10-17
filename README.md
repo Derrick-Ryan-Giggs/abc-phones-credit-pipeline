@@ -4,6 +4,8 @@ A batch data pipeline, a data quality framework and a portfolio analysis for ABC
 
 Raw files go in. Out come masked, analytics-ready tables, a set of automatic quality checks that can stop a bad load, and answers to three business questions: how healthy is the loan book, which customers fall behind, and how does credit performance relate to customer satisfaction.
 
+**Dashboard:** [ABC credit portfolio on Looker Studio](https://datastudio.google.com/reporting/1f380d0b-1356-4275-a994-160ec14670ea) (three pages: portfolio health, who falls behind, credit and customer satisfaction). Notes are in `dashboard/README.md`.
+
 ## Headline results (December 2025 snapshot, financed loans)
 
 | Measure | Result |
@@ -15,7 +17,7 @@ Raw files go in. Out come masked, analytics-ready tables, a set of automatic qua
 | Customers who never made a first payment | 5.8%, down from 7.2% in January |
 | Healthy customers still healthy at the next snapshot | 95.8%, up from 93.6% |
 
-- **Income matters most for risk.** Delinquency falls steadily as income rises: 22% for customers earning under 10,000 a month against 14% for those on 100,000 or more (trend p < 0.0001, loans sold in 2025). Age matters little.
+- **Income matters most for risk.** Delinquency falls steadily as income rises: 22% for customers earning under 10,000 a month against 14% for those on 100,000 or more (trend p < 0.0001, loans sold in 2025). Age matters less: customers aged 18-25 (20.2%) and 56+ (20.6%) fall behind more than those aged 26-55 (15.5% to 16.9%).
 - **Late customers are less satisfied.** The average recommendation score is 6.8 out of 10 for customers up to date and 4.3 for those over 90 days late. Trouble reaching customer care goes with the largest drop (4.4 against 7.7).
 - **Recommendation.** Contact customers in the first 1 to 7 days of lateness, with easy help from customer care and a simple payment plan, and test it against a group left alone.
 - **Data quality.** 48 automatic checks, including one that every staging table still has exactly the agreed columns and types. The only one that fails on the current data is a warning about a known source defect (payment dates later than the snapshot date in 31.5% of rows), which is flagged and kept out of the analysis.
@@ -135,6 +137,7 @@ slides/Annex_DE_Presentation.pdf
 | 3A Portfolio health | `scripts/analysis.py`, `outputs/portfolio_metrics.csv`, `outputs/charts/`, `sql/05_analysis/portfolio_health.sql` |
 | 3B Credit and NPS | `outputs/analysis_findings.md`, `outputs/charts_explained.md`, `sql/05_analysis/nps_vs_credit.sql` |
 | 3C Data gaps | `outputs/data_quality_report.md` and the final slide |
+| Dashboard | `dashboard/README.md` and the Looker Studio link at the top |
 | Slide deck | `slides/Annex_DE_Presentation.pdf` |
 
 ## Limits to keep in mind

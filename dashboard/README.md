@@ -5,6 +5,7 @@
 A three-page Looker Studio report on top of the BigQuery marts. It shows the same numbers as the deck and `outputs/portfolio_metrics.csv`, so anyone can check one against the other.
 
 - **Tool:** Looker Studio (free), report name "ABC credit portfolio"
+- **Link:** https://datastudio.google.com/reporting/1f380d0b-1356-4275-a994-160ec14670ea
 - **Reads from:** `abc-credit-portfolio-rg.abc_marts` (BigQuery)
 - **Credentials:** owner's credentials, so viewers need no BigQuery access
 - **Access:** private. Shared only with named people
@@ -124,6 +125,8 @@ Rates on page 2 are ratios of sums, never averages of rates, so small groups are
 | First payment missed (FPD) | Loans that missed the first payment, divided by financed loans |
 | Customers retained | Of loans Active, Inactive or PAR 7 at the previous snapshot, the share not Returned and not loss now |
 | NPS | Share scoring 9 to 10 minus share scoring 0 to 6, times 100 |
+
+Loss on page 1 is lost loans over all financed loans. The loss rate on page 2 is lost loans over live loans, so the two are not directly comparable.
 
 Full definitions and the reasoning behind them: `docs/assumptions.md` and `docs/data_dictionary.md`.
 
